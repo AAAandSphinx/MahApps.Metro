@@ -34,6 +34,7 @@
             <Item Type="MahApps.Metro.Controls.TransitioningContentControl" />
             <Item Type="MahApps.Metro.Controls.WindowButtonCommands" />
             <Item Type="MahApps.Metro.Controls.WindowCommands" />
+            <Item Type="MahApps.Metro.Controls.PropertyGrid" />
         </ToolboxItems>
     </File>
 </FileList>

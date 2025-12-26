@@ -1,6 +1,7 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/Dialogs/BaseMetroDialog.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -13,11 +14,12 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <ContentPresenter x:Name="PART_Top"
-                              Grid.Row="0"
-                              AutomationProperties.Name="Dialog top"
-                              Content="{TemplateBinding DialogTop}"
-                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+            <ContentPresenter
+                x:Name="PART_Top"
+                Grid.Row="0"
+                AutomationProperties.Name="Dialog top"
+                Content="{TemplateBinding DialogTop}"
+                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
 
             <Grid Grid.Row="1" Margin="{TemplateBinding Padding}">
                 <Grid.ColumnDefinitions>
@@ -30,86 +32,97 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <ContentControl x:Name="PART_Icon"
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                HorizontalAlignment="Center"
-                                AutomationProperties.Name="Dialog icon"
-                                Content="{TemplateBinding Icon}"
-                                ContentTemplate="{TemplateBinding IconTemplate}"
-                                Focusable="False"
-                                UseLayoutRounding="False" />
+                <ContentControl
+                    x:Name="PART_Icon"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    AutomationProperties.Name="Dialog icon"
+                    Content="{TemplateBinding Icon}"
+                    ContentTemplate="{TemplateBinding IconTemplate}"
+                    Focusable="False"
+                    UseLayoutRounding="False" />
 
-                <TextBlock x:Name="PART_Title"
-                           Grid.Row="0"
-                           Grid.Column="1"
-                           AutomationProperties.Name="Dialog title"
-                           FontSize="{TemplateBinding DialogTitleFontSize}"
-                           Foreground="{TemplateBinding Foreground}"
-                           Text="{TemplateBinding Title}"
-                           TextWrapping="Wrap" />
+                <TextBlock
+                    x:Name="PART_Title"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    AutomationProperties.Name="Dialog title"
+                    FontSize="{TemplateBinding DialogTitleFontSize}"
+                    Foreground="{TemplateBinding Foreground}"
+                    Text="{TemplateBinding Title}"
+                    TextWrapping="Wrap" />
 
-                <Grid x:Name="PART_Content"
-                      Grid.Row="1"
-                      Grid.Column="1"
-                      Margin="0 10 0 0"
-                      HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                      AutomationProperties.Name="Dialog content"
-                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                <Grid
+                    x:Name="PART_Content"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    AutomationProperties.Name="Dialog content"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
-                    <ScrollViewer x:Name="PART_MessageScrollViewer"
-                                  FocusVisualStyle="{x:Null}"
-                                  Focusable="False"
-                                  HorizontalScrollBarVisibility="Disabled"
-                                  VerticalScrollBarVisibility="Auto">
-                        <TextBlock x:Name="PART_MessageTextBlock"
-                                   Margin="0 5 0 0"
-                                   FontSize="{TemplateBinding DialogMessageFontSize}"
-                                   Foreground="{TemplateBinding Foreground}"
-                                   Text="{TemplateBinding Message}"
-                                   TextWrapping="Wrap" />
+                    <ScrollViewer
+                        x:Name="PART_MessageScrollViewer"
+                        FocusVisualStyle="{x:Null}"
+                        Focusable="False"
+                        HorizontalScrollBarVisibility="Disabled"
+                        VerticalScrollBarVisibility="Auto">
+                        <TextBlock
+                            x:Name="PART_MessageTextBlock"
+                            Margin="0,5,0,0"
+                            FontSize="{TemplateBinding DialogMessageFontSize}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Text="{TemplateBinding Message}"
+                            TextWrapping="Wrap" />
                     </ScrollViewer>
 
-                    <StackPanel Grid.Row="1"
-                                MinHeight="85"
-                                HorizontalAlignment="Right"
-                                Orientation="Horizontal">
-                        <Button x:Name="PART_AffirmativeButton"
-                                Margin="0 0 5 0"
-                                Content="{TemplateBinding AffirmativeButtonText}"
-                                FontSize="{TemplateBinding DialogButtonFontSize}"
-                                Style="{DynamicResource MahApps.Styles.Button.Dialogs}" />
-                        <Button x:Name="PART_NegativeButton"
-                                Margin="5 0 5 0"
-                                Content="{TemplateBinding NegativeButtonText}"
-                                FontSize="{TemplateBinding DialogButtonFontSize}"
-                                Style="{DynamicResource MahApps.Styles.Button.Dialogs}" />
-                        <Button x:Name="PART_FirstAuxiliaryButton"
-                                Margin="5 0 5 0"
-                                Content="{TemplateBinding FirstAuxiliaryButtonText}"
-                                FontSize="{TemplateBinding DialogButtonFontSize}"
-                                Style="{DynamicResource MahApps.Styles.Button.Dialogs}"
-                                Visibility="Collapsed" />
-                        <Button x:Name="PART_SecondAuxiliaryButton"
-                                Margin="5 0 0 0"
-                                Content="{TemplateBinding SecondAuxiliaryButtonText}"
-                                FontSize="{TemplateBinding DialogButtonFontSize}"
-                                Style="{DynamicResource MahApps.Styles.Button.Dialogs}"
-                                Visibility="Collapsed" />
+                    <StackPanel
+                        Grid.Row="1"
+                        MinHeight="85"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal">
+                        <Button
+                            x:Name="PART_AffirmativeButton"
+                            Margin="0,0,5,0"
+                            Content="{TemplateBinding AffirmativeButtonText}"
+                            FontSize="{TemplateBinding DialogButtonFontSize}"
+                            Style="{DynamicResource MahApps.Styles.Button.Dialogs}" />
+                        <Button
+                            x:Name="PART_NegativeButton"
+                            Margin="5,0,5,0"
+                            Content="{TemplateBinding NegativeButtonText}"
+                            FontSize="{TemplateBinding DialogButtonFontSize}"
+                            Style="{DynamicResource MahApps.Styles.Button.Dialogs}" />
+                        <Button
+                            x:Name="PART_FirstAuxiliaryButton"
+                            Margin="5,0,5,0"
+                            Content="{TemplateBinding FirstAuxiliaryButtonText}"
+                            FontSize="{TemplateBinding DialogButtonFontSize}"
+                            Style="{DynamicResource MahApps.Styles.Button.Dialogs}"
+                            Visibility="Collapsed" />
+                        <Button
+                            x:Name="PART_SecondAuxiliaryButton"
+                            Margin="5,0,0,0"
+                            Content="{TemplateBinding SecondAuxiliaryButtonText}"
+                            FontSize="{TemplateBinding DialogButtonFontSize}"
+                            Style="{DynamicResource MahApps.Styles.Button.Dialogs}"
+                            Visibility="Collapsed" />
                     </StackPanel>
                 </Grid>
             </Grid>
 
-            <ContentPresenter x:Name="PART_Bottom"
-                              Grid.Row="2"
-                              AutomationProperties.Name="Dialog bottom"
-                              Content="{TemplateBinding DialogBottom}"
-                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+            <ContentPresenter
+                x:Name="PART_Bottom"
+                Grid.Row="2"
+                AutomationProperties.Name="Dialog bottom"
+                Content="{TemplateBinding DialogBottom}"
+                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="ButtonStyle" Value="Affirmative">
@@ -168,9 +181,10 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="MahApps.Styles.MessageDialog"
-           BasedOn="{StaticResource MahApps.Styles.BaseMetroDialog}"
-           TargetType="{x:Type dialogs:MessageDialog}">
+    <Style
+        x:Key="MahApps.Styles.MessageDialog"
+        BasedOn="{StaticResource MahApps.Styles.BaseMetroDialog}"
+        TargetType="{x:Type dialogs:MessageDialog}">
         <Setter Property="Template" Value="{StaticResource MahApps.Templates.MessageDialog}" />
     </Style>
 </ResourceDictionary>

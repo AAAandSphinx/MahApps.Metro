@@ -1,6 +1,7 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:mah="clr-namespace:MahApps.Metro.Controls">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/HamburgerMenuTemplate.xaml" />
@@ -16,9 +17,10 @@
             <Setter.Value>
                 <DataTemplate>
                     <!--  PackIconMaterial - Menu  -->
-                    <mah:PathIcon Width="22"
-                                  Height="22"
-                                  Data="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                    <mah:PathIcon
+                        Width="22"
+                        Height="22"
+                        Data="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
@@ -41,9 +43,10 @@
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
     </Style>
 
-    <Style x:Key="MahApps.Styles.HamburgerMenu.CreatorsUpdate"
-           BasedOn="{StaticResource MahApps.Styles.HamburgerMenu}"
-           TargetType="{x:Type mah:HamburgerMenu}">
+    <Style
+        x:Key="MahApps.Styles.HamburgerMenu.CreatorsUpdate"
+        BasedOn="{StaticResource MahApps.Styles.HamburgerMenu}"
+        TargetType="{x:Type mah:HamburgerMenu}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource MahApps.Styles.ListBoxItem.HamburgerMenuItem.CreatorsUpdate}" />
         <Setter Property="OptionsItemContainerStyle" Value="{StaticResource MahApps.Styles.ListBoxItem.HamburgerMenuItem.CreatorsUpdate}" />
         <Setter Property="PaneBackground" Value="{DynamicResource MahApps.Brushes.ThemeBackground}" />

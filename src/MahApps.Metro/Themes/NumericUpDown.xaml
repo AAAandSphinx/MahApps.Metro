@@ -1,6 +1,7 @@
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:mah="clr-namespace:MahApps.Metro.Controls">
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Shared.xaml" />
@@ -22,24 +23,26 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ButtonBase}">
-                    <mah:ClipBorder x:Name="Border"
-                                    Margin="0"
-                                    Background="{TemplateBinding Background}"
-                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                    BorderThickness="{TemplateBinding BorderThickness}"
-                                    CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        <mah:ContentControlEx x:Name="PART_ContentPresenter"
-                                              Padding="{TemplateBinding Padding}"
-                                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                              Content="{TemplateBinding Content}"
-                                              ContentCharacterCasing="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:ControlsHelper.ContentCharacterCasing)}"
-                                              ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                              ContentTemplate="{TemplateBinding ContentTemplate}"
-                                              ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
-                                              RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
-                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    <mah:ClipBorder
+                        x:Name="Border"
+                        Margin="0"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <mah:ContentControlEx
+                            x:Name="PART_ContentPresenter"
+                            Padding="{TemplateBinding Padding}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentCharacterCasing="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:ControlsHelper.ContentCharacterCasing)}"
+                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                            RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </mah:ClipBorder>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -75,22 +78,24 @@
         <Setter Property="ButtonDownContentTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <mah:PathIcon Width="14"
-                                  Height="14"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  Data="M19,13H5V11H19V13Z" />
+                    <mah:PathIcon
+                        Width="14"
+                        Height="14"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Data="M19,13H5V11H19V13Z" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
         <Setter Property="ButtonUpContentTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <mah:PathIcon Width="14"
-                                  Height="14"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                    <mah:PathIcon
+                        Width="14"
+                        Height="14"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
@@ -111,12 +116,13 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type mah:NumericUpDown}">
                     <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        <Border x:Name="Base"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        <Border
+                            x:Name="Base"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
 
                         <Grid Margin="{TemplateBinding BorderThickness}">
                             <Grid.ColumnDefinitions>
@@ -125,93 +131,98 @@
                                 <ColumnDefinition x:Name="PART_RightColumn" Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <TextBox x:Name="PART_TextBox"
-                                     Grid.Column="0"
-                                     MinWidth="20"
-                                     MinHeight="0"
-                                     Margin="0"
-                                     Padding="{TemplateBinding Padding}"
-                                     HorizontalAlignment="Stretch"
-                                     HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                     VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                     mah:ControlsHelper.DisabledVisualElementVisibility="Collapsed"
-                                     mah:TextBoxHelper.AutoWatermark="{TemplateBinding mah:TextBoxHelper.AutoWatermark}"
-                                     mah:TextBoxHelper.ButtonCommand="{TemplateBinding mah:TextBoxHelper.ButtonCommand}"
-                                     mah:TextBoxHelper.ButtonCommandParameter="{TemplateBinding mah:TextBoxHelper.ButtonCommandParameter}"
-                                     mah:TextBoxHelper.ButtonCommandTarget="{TemplateBinding mah:TextBoxHelper.ButtonCommandTarget}"
-                                     mah:TextBoxHelper.ButtonContent="{TemplateBinding mah:TextBoxHelper.ButtonContent}"
-                                     mah:TextBoxHelper.ButtonContentTemplate="{TemplateBinding mah:TextBoxHelper.ButtonContentTemplate}"
-                                     mah:TextBoxHelper.ButtonFontFamily="{TemplateBinding mah:TextBoxHelper.ButtonFontFamily}"
-                                     mah:TextBoxHelper.ButtonFontSize="{TemplateBinding mah:TextBoxHelper.ButtonFontSize}"
-                                     mah:TextBoxHelper.ButtonTemplate="{TemplateBinding mah:TextBoxHelper.ButtonTemplate}"
-                                     mah:TextBoxHelper.ButtonWidth="{TemplateBinding mah:TextBoxHelper.ButtonWidth}"
-                                     mah:TextBoxHelper.ButtonsAlignment="{TemplateBinding ButtonsAlignment}"
-                                     mah:TextBoxHelper.ClearTextButton="{TemplateBinding mah:TextBoxHelper.ClearTextButton}"
-                                     mah:TextBoxHelper.HasText="{TemplateBinding mah:TextBoxHelper.HasText}"
-                                     mah:TextBoxHelper.SelectAllOnFocus="{TemplateBinding mah:TextBoxHelper.SelectAllOnFocus}"
-                                     mah:TextBoxHelper.UseFloatingWatermark="{TemplateBinding mah:TextBoxHelper.UseFloatingWatermark}"
-                                     mah:TextBoxHelper.Watermark="{TemplateBinding mah:TextBoxHelper.Watermark}"
-                                     mah:TextBoxHelper.WatermarkAlignment="{TemplateBinding mah:TextBoxHelper.WatermarkAlignment}"
-                                     mah:TextBoxHelper.WatermarkTrimming="{TemplateBinding mah:TextBoxHelper.WatermarkTrimming}"
-                                     mah:TextBoxHelper.WatermarkWrapping="{TemplateBinding mah:TextBoxHelper.WatermarkWrapping}"
-                                     Background="{x:Null}"
-                                     BorderThickness="0"
-                                     ContextMenu="{TemplateBinding ContextMenu}"
-                                     FocusVisualStyle="{x:Null}"
-                                     Focusable="{TemplateBinding Focusable}"
-                                     FontFamily="{TemplateBinding FontFamily}"
-                                     FontSize="{TemplateBinding FontSize}"
-                                     Foreground="{TemplateBinding Foreground}"
-                                     HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
-                                     IsReadOnly="{TemplateBinding IsReadOnly}"
-                                     IsTabStop="{TemplateBinding IsTabStop}"
-                                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                     TabIndex="{TemplateBinding TabIndex}"
-                                     VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" />
+                            <TextBox
+                                x:Name="PART_TextBox"
+                                Grid.Column="0"
+                                MinWidth="20"
+                                MinHeight="0"
+                                Margin="0"
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                mah:ControlsHelper.DisabledVisualElementVisibility="Collapsed"
+                                mah:TextBoxHelper.AutoWatermark="{TemplateBinding mah:TextBoxHelper.AutoWatermark}"
+                                mah:TextBoxHelper.ButtonCommand="{TemplateBinding mah:TextBoxHelper.ButtonCommand}"
+                                mah:TextBoxHelper.ButtonCommandParameter="{TemplateBinding mah:TextBoxHelper.ButtonCommandParameter}"
+                                mah:TextBoxHelper.ButtonCommandTarget="{TemplateBinding mah:TextBoxHelper.ButtonCommandTarget}"
+                                mah:TextBoxHelper.ButtonContent="{TemplateBinding mah:TextBoxHelper.ButtonContent}"
+                                mah:TextBoxHelper.ButtonContentTemplate="{TemplateBinding mah:TextBoxHelper.ButtonContentTemplate}"
+                                mah:TextBoxHelper.ButtonFontFamily="{TemplateBinding mah:TextBoxHelper.ButtonFontFamily}"
+                                mah:TextBoxHelper.ButtonFontSize="{TemplateBinding mah:TextBoxHelper.ButtonFontSize}"
+                                mah:TextBoxHelper.ButtonTemplate="{TemplateBinding mah:TextBoxHelper.ButtonTemplate}"
+                                mah:TextBoxHelper.ButtonWidth="{TemplateBinding mah:TextBoxHelper.ButtonWidth}"
+                                mah:TextBoxHelper.ButtonsAlignment="{TemplateBinding ButtonsAlignment}"
+                                mah:TextBoxHelper.ClearTextButton="{TemplateBinding mah:TextBoxHelper.ClearTextButton}"
+                                mah:TextBoxHelper.HasText="{TemplateBinding mah:TextBoxHelper.HasText}"
+                                mah:TextBoxHelper.SelectAllOnFocus="{TemplateBinding mah:TextBoxHelper.SelectAllOnFocus}"
+                                mah:TextBoxHelper.UseFloatingWatermark="{TemplateBinding mah:TextBoxHelper.UseFloatingWatermark}"
+                                mah:TextBoxHelper.Watermark="{TemplateBinding mah:TextBoxHelper.Watermark}"
+                                mah:TextBoxHelper.WatermarkAlignment="{TemplateBinding mah:TextBoxHelper.WatermarkAlignment}"
+                                mah:TextBoxHelper.WatermarkTrimming="{TemplateBinding mah:TextBoxHelper.WatermarkTrimming}"
+                                mah:TextBoxHelper.WatermarkWrapping="{TemplateBinding mah:TextBoxHelper.WatermarkWrapping}"
+                                Background="{x:Null}"
+                                BorderThickness="0"
+                                ContextMenu="{TemplateBinding ContextMenu}"
+                                FocusVisualStyle="{x:Null}"
+                                Focusable="{TemplateBinding Focusable}"
+                                FontFamily="{TemplateBinding FontFamily}"
+                                FontSize="{TemplateBinding FontSize}"
+                                Foreground="{TemplateBinding Foreground}"
+                                HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                IsReadOnly="{TemplateBinding IsReadOnly}"
+                                IsTabStop="{TemplateBinding IsTabStop}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                TabIndex="{TemplateBinding TabIndex}"
+                                VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" />
 
-                            <RepeatButton x:Name="PART_NumericUp"
-                                          Grid.Column="1"
-                                          Width="{TemplateBinding UpDownButtonsWidth}"
-                                          Margin="0"
-                                          mah:ControlsHelper.CornerRadius="0"
-                                          BorderThickness="{DynamicResource NumericUpDownSpinButtonRightBorderThickness}"
-                                          Content="{TemplateBinding ButtonUpContent}"
-                                          ContentStringFormat="{TemplateBinding ButtonUpContentStringFormat}"
-                                          ContentTemplate="{TemplateBinding ButtonUpContentTemplate}"
-                                          Delay="{TemplateBinding Delay}"
-                                          Focusable="{TemplateBinding UpDownButtonsFocusable}"
-                                          Style="{TemplateBinding SpinButtonStyle}" />
+                            <RepeatButton
+                                x:Name="PART_NumericUp"
+                                Grid.Column="1"
+                                Width="{TemplateBinding UpDownButtonsWidth}"
+                                Margin="0"
+                                mah:ControlsHelper.CornerRadius="0"
+                                BorderThickness="{DynamicResource NumericUpDownSpinButtonRightBorderThickness}"
+                                Content="{TemplateBinding ButtonUpContent}"
+                                ContentStringFormat="{TemplateBinding ButtonUpContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ButtonUpContentTemplate}"
+                                Delay="{TemplateBinding Delay}"
+                                Focusable="{TemplateBinding UpDownButtonsFocusable}"
+                                Style="{TemplateBinding SpinButtonStyle}" />
 
-                            <RepeatButton x:Name="PART_NumericDown"
-                                          Grid.Column="2"
-                                          Width="{TemplateBinding UpDownButtonsWidth}"
-                                          Margin="0"
-                                          mah:ControlsHelper.CornerRadius="0"
-                                          BorderThickness="{DynamicResource NumericUpDownSpinButtonRightBorderThickness}"
-                                          Content="{TemplateBinding ButtonDownContent}"
-                                          ContentStringFormat="{TemplateBinding ButtonDownContentStringFormat}"
-                                          ContentTemplate="{TemplateBinding ButtonDownContentTemplate}"
-                                          Delay="{TemplateBinding Delay}"
-                                          Focusable="{TemplateBinding UpDownButtonsFocusable}"
-                                          Style="{TemplateBinding SpinButtonStyle}" />
+                            <RepeatButton
+                                x:Name="PART_NumericDown"
+                                Grid.Column="2"
+                                Width="{TemplateBinding UpDownButtonsWidth}"
+                                Margin="0"
+                                mah:ControlsHelper.CornerRadius="0"
+                                BorderThickness="{DynamicResource NumericUpDownSpinButtonRightBorderThickness}"
+                                Content="{TemplateBinding ButtonDownContent}"
+                                ContentStringFormat="{TemplateBinding ButtonDownContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ButtonDownContentTemplate}"
+                                Delay="{TemplateBinding Delay}"
+                                Focusable="{TemplateBinding UpDownButtonsFocusable}"
+                                Style="{TemplateBinding SpinButtonStyle}" />
                         </Grid>
 
-                        <Border x:Name="FocusBorder"
-                                Background="{x:Null}"
-                                BorderBrush="{x:Null}"
-                                BorderThickness="0"
-                                CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        <Border
+                            x:Name="FocusBorder"
+                            Background="{x:Null}"
+                            BorderBrush="{x:Null}"
+                            BorderThickness="0"
+                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
 
-                        <Border x:Name="DisabledVisualElement"
-                                Background="{DynamicResource MahApps.Brushes.Control.Disabled}"
-                                BorderBrush="{DynamicResource MahApps.Brushes.Control.Disabled}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                IsHitTestVisible="False"
-                                Opacity="0"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:ControlsHelper.DisabledVisualElementVisibility), Mode=OneWay}" />
+                        <Border
+                            x:Name="DisabledVisualElement"
+                            Background="{DynamicResource MahApps.Brushes.Control.Disabled}"
+                            BorderBrush="{DynamicResource MahApps.Brushes.Control.Disabled}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                            IsHitTestVisible="False"
+                            Opacity="0"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:ControlsHelper.DisabledVisualElementVisibility), Mode=OneWay}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <MultiTrigger>
@@ -333,9 +344,10 @@
         <Setter Property="mah:TextBoxHelper.WatermarkAlignment" Value="Right" />
     </Style>
 
-    <Style x:Key="MahApps.Styles.NumericUpDown.Fluent"
-           BasedOn="{StaticResource MahApps.Styles.NumericUpDown}"
-           TargetType="{x:Type mah:NumericUpDown}">
+    <Style
+        x:Key="MahApps.Styles.NumericUpDown.Fluent"
+        BasedOn="{StaticResource MahApps.Styles.NumericUpDown}"
+        TargetType="{x:Type mah:NumericUpDown}">
         <Style.Resources>
             <Thickness x:Key="NumericUpDownSelectedBorderThickness">2,2,2,2</Thickness>
             <Thickness x:Key="NumericUpDownSpinButtonRightBorderThickness">1,0,0,0</Thickness>
@@ -344,28 +356,30 @@
         <Setter Property="ButtonDownContentTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <mah:PathIcon Width="14"
-                                  Height="14"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  Data="M 18.935547 4.560547 L 19.814453 5.439453 L 10 15.253906 L 0.185547 5.439453 L 1.064453 4.560547 L 10 13.496094 Z" />
+                    <mah:PathIcon
+                        Width="14"
+                        Height="14"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Data="M 18.935547 4.560547 L 19.814453 5.439453 L 10 15.253906 L 0.185547 5.439453 L 1.064453 4.560547 L 10 13.496094 Z" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
         <Setter Property="ButtonUpContentTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <mah:PathIcon Width="14"
-                                  Height="14"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  Data="M 19.091797 14.970703 L 10 5.888672 L 0.908203 14.970703 L 0.029297 14.091797 L 10 4.111328 L 19.970703 14.091797 Z" />
+                    <mah:PathIcon
+                        Width="14"
+                        Height="14"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Data="M 19.091797 14.970703 L 10 5.888672 L 0.908203 14.970703 L 0.029297 14.091797 L 10 4.111328 L 19.970703 14.091797 Z" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
         <Setter Property="FontSize" Value="{DynamicResource MahApps.Font.Size.Default}" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-        <Setter Property="Padding" Value="10 5" />
+        <Setter Property="Padding" Value="10,5" />
         <Setter Property="SpinButtonStyle">
             <Setter.Value>
                 <Style BasedOn="{StaticResource MahApps.Styles.Button.NumericUpDown.Spin}" TargetType="{x:Type ButtonBase}">
@@ -392,11 +406,12 @@
         <Setter Property="mah:TextBoxHelper.ButtonContentTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <mah:PathIcon Width="12"
-                                  Height="12"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  Data="F1 M 11.416016 10 L 20 18.583984 L 18.583984 20 L 10 11.416016 L 1.416016 20 L 0 18.583984 L 8.583984 10 L 0 1.416016 L 1.416016 0 L 10 8.583984 L 18.583984 0 L 20 1.416016 Z" />
+                    <mah:PathIcon
+                        Width="12"
+                        Height="12"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Data="F1 M 11.416016 10 L 20 18.583984 L 18.583984 20 L 10 11.416016 L 1.416016 20 L 0 18.583984 L 8.583984 10 L 0 1.416016 L 1.416016 0 L 10 8.583984 L 18.583984 0 L 20 1.416016 Z" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>

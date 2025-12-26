@@ -1,10 +1,12 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:mah="clr-namespace:MahApps.Metro.Controls">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls">
 
-    <Style x:Key="MahApps.Styles.ScrollViewer.GridView"
-           BasedOn="{StaticResource {x:Static GridView.GridViewScrollViewerStyleKey}}"
-           TargetType="{x:Type ScrollViewer}">
+    <Style
+        x:Key="MahApps.Styles.ScrollViewer.GridView"
+        BasedOn="{StaticResource {x:Static GridView.GridViewScrollViewerStyleKey}}"
+        TargetType="{x:Type ScrollViewer}">
         <Setter Property="Focusable" Value="False" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
@@ -20,48 +22,53 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <DockPanel Margin="{TemplateBinding Padding}">
-                            <ScrollViewer DockPanel.Dock="Top"
-                                          Focusable="False"
-                                          HorizontalScrollBarVisibility="Hidden"
-                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                          VerticalScrollBarVisibility="Hidden">
-                                <mah:GridViewHeaderRowPresenterEx x:Name="PART_HeaderRowPresenter"
-                                                                  Margin="2 0 2 0"
-                                                                  AllowsColumnReorder="{Binding TemplatedParent.View.AllowsColumnReorder, RelativeSource={RelativeSource TemplatedParent}}"
-                                                                  ColumnHeaderContainerStyle="{Binding TemplatedParent.View.ColumnHeaderContainerStyle, RelativeSource={RelativeSource TemplatedParent}}"
-                                                                  ColumnHeaderContextMenu="{Binding TemplatedParent.View.ColumnHeaderContextMenu, RelativeSource={RelativeSource TemplatedParent}}"
-                                                                  ColumnHeaderStringFormat="{Binding TemplatedParent.View.ColumnHeaderStringFormat, RelativeSource={RelativeSource TemplatedParent}}"
-                                                                  ColumnHeaderTemplate="{Binding TemplatedParent.View.ColumnHeaderTemplate, RelativeSource={RelativeSource TemplatedParent}}"
-                                                                  ColumnHeaderTemplateSelector="{Binding TemplatedParent.View.ColumnHeaderTemplateSelector, RelativeSource={RelativeSource TemplatedParent}}"
-                                                                  ColumnHeaderToolTip="{Binding TemplatedParent.View.ColumnHeaderToolTip, RelativeSource={RelativeSource TemplatedParent}}"
-                                                                  Columns="{Binding TemplatedParent.View.Columns, RelativeSource={RelativeSource TemplatedParent}}"
-                                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            <ScrollViewer
+                                DockPanel.Dock="Top"
+                                Focusable="False"
+                                HorizontalScrollBarVisibility="Hidden"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalScrollBarVisibility="Hidden">
+                                <mah:GridViewHeaderRowPresenterEx
+                                    x:Name="PART_HeaderRowPresenter"
+                                    Margin="2,0,2,0"
+                                    AllowsColumnReorder="{Binding TemplatedParent.View.AllowsColumnReorder, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderContainerStyle="{Binding TemplatedParent.View.ColumnHeaderContainerStyle, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderContextMenu="{Binding TemplatedParent.View.ColumnHeaderContextMenu, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderStringFormat="{Binding TemplatedParent.View.ColumnHeaderStringFormat, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderTemplate="{Binding TemplatedParent.View.ColumnHeaderTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderTemplateSelector="{Binding TemplatedParent.View.ColumnHeaderTemplateSelector, RelativeSource={RelativeSource TemplatedParent}}"
+                                    ColumnHeaderToolTip="{Binding TemplatedParent.View.ColumnHeaderToolTip, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Columns="{Binding TemplatedParent.View.Columns, RelativeSource={RelativeSource TemplatedParent}}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                             </ScrollViewer>
-                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
-                                                    CanContentScroll="{TemplateBinding CanContentScroll}"
-                                                    Content="{TemplateBinding Content}"
-                                                    ContentTemplate="{TemplateBinding ContentTemplate}"
-                                                    KeyboardNavigation.DirectionalNavigation="Local"
-                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            <ScrollContentPresenter
+                                x:Name="PART_ScrollContentPresenter"
+                                CanContentScroll="{TemplateBinding CanContentScroll}"
+                                Content="{TemplateBinding Content}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                KeyboardNavigation.DirectionalNavigation="Local"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </DockPanel>
-                        <ScrollBar x:Name="PART_HorizontalScrollBar"
-                                   Grid.Row="1"
-                                   Cursor="Arrow"
-                                   Maximum="{TemplateBinding ScrollableWidth}"
-                                   Minimum="0.0"
-                                   Orientation="Horizontal"
-                                   ViewportSize="{TemplateBinding ViewportWidth}"
-                                   Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
-                                   Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
-                        <ScrollBar x:Name="PART_VerticalScrollBar"
-                                   Grid.Column="1"
-                                   Cursor="Arrow"
-                                   Maximum="{TemplateBinding ScrollableHeight}"
-                                   Minimum="0.0"
-                                   Orientation="Vertical"
-                                   ViewportSize="{TemplateBinding ViewportHeight}"
-                                   Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
-                                   Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ScrollBar
+                            x:Name="PART_HorizontalScrollBar"
+                            Grid.Row="1"
+                            Cursor="Arrow"
+                            Maximum="{TemplateBinding ScrollableWidth}"
+                            Minimum="0.0"
+                            Orientation="Horizontal"
+                            ViewportSize="{TemplateBinding ViewportWidth}"
+                            Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                            Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ScrollBar
+                            x:Name="PART_VerticalScrollBar"
+                            Grid.Column="1"
+                            Cursor="Arrow"
+                            Maximum="{TemplateBinding ScrollableHeight}"
+                            Minimum="0.0"
+                            Orientation="Vertical"
+                            ViewportSize="{TemplateBinding ViewportHeight}"
+                            Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                            Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
                         <!-- this is from original style, but we don't want it!!!
                         <DockPanel Background="{Binding Background, ElementName=PART_VerticalScrollBar}"
                                    Grid.Column="1"
@@ -106,19 +113,21 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListView">
-                    <Border x:Name="Border"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        <ScrollViewer Padding="{TemplateBinding Padding}"
-                                      CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}"
-                                      Focusable="False"
-                                      HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
-                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                      Style="{DynamicResource MahApps.Styles.ScrollViewer.GridView}"
-                                      VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                    <Border
+                        x:Name="Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <ScrollViewer
+                            Padding="{TemplateBinding Padding}"
+                            CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}"
+                            Focusable="False"
+                            HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            Style="{DynamicResource MahApps.Styles.ScrollViewer.GridView}"
+                            VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
                             <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </ScrollViewer>
                     </Border>
@@ -141,9 +150,10 @@
         <Setter Property="mah:ItemHelper.GridViewHeaderIndicatorBrush" Value="{DynamicResource MahApps.Brushes.AccentBase}" />
     </Style>
 
-    <Style x:Key="MahApps.Styles.ListView.Virtualized"
-           BasedOn="{StaticResource MahApps.Styles.ListView}"
-           TargetType="{x:Type ListView}">
+    <Style
+        x:Key="MahApps.Styles.ListView.Virtualized"
+        BasedOn="{StaticResource MahApps.Styles.ListView}"
+        TargetType="{x:Type ListView}">
         <Setter Property="ScrollViewer.CanContentScroll" Value="True" />
         <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="False" />
         <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True" />
@@ -162,30 +172,35 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Grid x:Name="RootGrid"
-                          Background="Transparent"
-                          RenderOptions.ClearTypeHint="{TemplateBinding RenderOptions.ClearTypeHint}"
-                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        <mah:ClipBorder x:Name="Background"
-                                        Background="{TemplateBinding Background}"
-                                        CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    <Grid
+                        x:Name="RootGrid"
+                        Background="Transparent"
+                        RenderOptions.ClearTypeHint="{TemplateBinding RenderOptions.ClearTypeHint}"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <mah:ClipBorder
+                            x:Name="Background"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
 
-                        <mah:ClipBorder x:Name="Border"
-                                        BorderBrush="{TemplateBinding BorderBrush}"
-                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                        CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <mah:ClipBorder
+                            x:Name="Border"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                             <Grid>
-                                <GridViewRowPresenter x:Name="PART_RowPresenter"
-                                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                                <ContentPresenter x:Name="PART_ContentPresenter"
-                                                  Margin="{TemplateBinding Padding}"
-                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                                  Visibility="Collapsed" />
+                                <GridViewRowPresenter
+                                    x:Name="PART_RowPresenter"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                <ContentPresenter
+                                    x:Name="PART_ContentPresenter"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    Visibility="Collapsed" />
                             </Grid>
                         </mah:ClipBorder>
                     </Grid>
@@ -290,37 +305,43 @@
     </Style>
 
     <!--  Gives the impression that items cannot be selected on the ListView  -->
-    <Style x:Key="MahApps.Styles.ListViewItem.NonSelectable"
-           BasedOn="{StaticResource MahApps.Styles.ListViewItem}"
-           TargetType="{x:Type ListViewItem}">
+    <Style
+        x:Key="MahApps.Styles.ListViewItem.NonSelectable"
+        BasedOn="{StaticResource MahApps.Styles.ListViewItem}"
+        TargetType="{x:Type ListViewItem}">
         <Setter Property="IsTabStop" Value="False" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Grid x:Name="RootGrid"
-                          Background="Transparent"
-                          RenderOptions.ClearTypeHint="{TemplateBinding RenderOptions.ClearTypeHint}"
-                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        <mah:ClipBorder x:Name="Background"
-                                        Background="{TemplateBinding Background}"
-                                        CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    <Grid
+                        x:Name="RootGrid"
+                        Background="Transparent"
+                        RenderOptions.ClearTypeHint="{TemplateBinding RenderOptions.ClearTypeHint}"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <mah:ClipBorder
+                            x:Name="Background"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
 
-                        <mah:ClipBorder x:Name="Border"
-                                        BorderBrush="{TemplateBinding BorderBrush}"
-                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                        CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <mah:ClipBorder
+                            x:Name="Border"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                             <Grid>
-                                <GridViewRowPresenter x:Name="PART_RowPresenter"
-                                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                                <ContentPresenter x:Name="PART_ContentPresenter"
-                                                  Margin="{TemplateBinding Padding}"
-                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                                  Visibility="Collapsed" />
+                                <GridViewRowPresenter
+                                    x:Name="PART_RowPresenter"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                <ContentPresenter
+                                    x:Name="PART_ContentPresenter"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    Visibility="Collapsed" />
                             </Grid>
                         </mah:ClipBorder>
                     </Grid>
@@ -373,12 +394,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Border Margin="0 0 0 2"
-                            Padding="{TemplateBinding Padding}"
-                            Background="Transparent">
-                        <Rectangle Width="1"
-                                   HorizontalAlignment="Center"
-                                   Fill="{TemplateBinding Background}" />
+                    <Border
+                        Margin="0,0,0,2"
+                        Padding="{TemplateBinding Padding}"
+                        Background="Transparent">
+                        <Rectangle
+                            Width="1"
+                            HorizontalAlignment="Center"
+                            Fill="{TemplateBinding Background}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -390,7 +413,7 @@
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Text}" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
-        <Setter Property="Padding" Value="4 2 4 2" />
+        <Setter Property="Padding" Value="4,2,4,2" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
@@ -398,28 +421,30 @@
                     <Grid>
                         <Rectangle Fill="Transparent" IsHitTestVisible="True" />
                         <Border x:Name="HeaderBorder">
-                            <mah:ContentControlEx x:Name="HeaderContent"
-                                                  Margin="0 0 0 1"
-                                                  Padding="{TemplateBinding Padding}"
-                                                  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                  Content="{TemplateBinding Content}"
-                                                  ContentCharacterCasing="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:ControlsHelper.ContentCharacterCasing)}"
-                                                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                                  ContentTemplate="{TemplateBinding ContentTemplate}"
-                                                  ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
-                                                  RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
-                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            <mah:ContentControlEx
+                                x:Name="HeaderContent"
+                                Margin="0,0,0,1"
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                ContentCharacterCasing="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:ControlsHelper.ContentCharacterCasing)}"
+                                ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </Border>
-                        <Thumb x:Name="PART_HeaderGripper"
-                               Margin="0 0 -9 0"
-                               HorizontalAlignment="Right"
-                               Style="{StaticResource MahApps.Styles.Thumb.GridViewColumnHeaderGripper}" />
+                        <Thumb
+                            x:Name="PART_HeaderGripper"
+                            Margin="0,0,-9,0"
+                            HorizontalAlignment="Right"
+                            Style="{StaticResource MahApps.Styles.Thumb.GridViewColumnHeaderGripper}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="HeaderBorder" Property="Background" Value="{DynamicResource MahApps.Brushes.Gray8}" />
-                            <Setter TargetName="HeaderContent" Property="Margin" Value="1 1 0 0" />
+                            <Setter TargetName="HeaderContent" Property="Margin" Value="1,1,0,0" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
@@ -437,9 +462,10 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="GridViewColumnHeader">
                             <Canvas Name="PART_FloatingHeaderCanvas">
-                                <Rectangle Width="{TemplateBinding ActualWidth}"
-                                           Height="{TemplateBinding ActualHeight}"
-                                           Fill="{DynamicResource MahApps.Brushes.Accent3}" />
+                                <Rectangle
+                                    Width="{TemplateBinding ActualWidth}"
+                                    Height="{TemplateBinding ActualHeight}"
+                                    Fill="{DynamicResource MahApps.Brushes.Accent3}" />
                                 <!--  Fill="#60000000" />  -->
                             </Canvas>
                         </ControlTemplate>

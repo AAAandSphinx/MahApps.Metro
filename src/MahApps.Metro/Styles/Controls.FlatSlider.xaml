@@ -1,7 +1,8 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:mah="clr-namespace:MahApps.Metro.Controls"
-                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
 
     <system:Double x:Key="MahApps.Sizes.Slider.Flat.Horizontal.MinHeight">12</system:Double>
     <system:Double x:Key="MahApps.Sizes.Slider.Flat.Vertical.MinWidth">12</system:Double>
@@ -38,19 +39,19 @@
         <Style.Triggers>
             <Trigger Property="Placement" Value="Top">
                 <Setter Property="Height" Value="6" />
-                <Setter Property="Margin" Value="0 0 0 3" />
+                <Setter Property="Margin" Value="0,0,0,3" />
             </Trigger>
             <Trigger Property="Placement" Value="Bottom">
                 <Setter Property="Height" Value="6" />
-                <Setter Property="Margin" Value="0 3 0 0" />
+                <Setter Property="Margin" Value="0,3,0,0" />
             </Trigger>
 
             <Trigger Property="Placement" Value="Left">
-                <Setter Property="Margin" Value="0 0 3 0" />
+                <Setter Property="Margin" Value="0,0,3,0" />
                 <Setter Property="Width" Value="6" />
             </Trigger>
             <Trigger Property="Placement" Value="Right">
-                <Setter Property="Margin" Value="3 0 0 0" />
+                <Setter Property="Margin" Value="3,0,0,0" />
                 <Setter Property="Width" Value="6" />
             </Trigger>
         </Style.Triggers>
@@ -63,29 +64,34 @@
                 <RowDefinition Height="*" MinHeight="{TemplateBinding Slider.MinHeight}" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <TickBar x:Name="TopTick"
-                     Grid.Row="0"
-                     Placement="Top"
-                     Style="{DynamicResource MahApps.Styles.TickBar.Slider.Flat}" />
-            <TickBar x:Name="BottomTick"
-                     Grid.Row="2"
-                     Placement="Bottom"
-                     Style="{DynamicResource MahApps.Styles.TickBar.Slider.Flat}" />
+            <TickBar
+                x:Name="TopTick"
+                Grid.Row="0"
+                Placement="Top"
+                Style="{DynamicResource MahApps.Styles.TickBar.Slider.Flat}" />
+            <TickBar
+                x:Name="BottomTick"
+                Grid.Row="2"
+                Placement="Bottom"
+                Style="{DynamicResource MahApps.Styles.TickBar.Slider.Flat}" />
             <Track x:Name="PART_Track" Grid.Row="1">
                 <Track.DecreaseRepeatButton>
-                    <RepeatButton Background="{TemplateBinding Slider.Foreground}"
-                                  Command="Slider.DecreaseLarge"
-                                  Style="{DynamicResource MahApps.Styles.RepeatButton.SliderTrack.Flat}" />
+                    <RepeatButton
+                        Background="{TemplateBinding Slider.Foreground}"
+                        Command="Slider.DecreaseLarge"
+                        Style="{DynamicResource MahApps.Styles.RepeatButton.SliderTrack.Flat}" />
                 </Track.DecreaseRepeatButton>
                 <Track.Thumb>
-                    <mah:MetroThumb Width="{TemplateBinding Slider.MinHeight}"
-                                    Background="{TemplateBinding Slider.BorderBrush}"
-                                    Style="{DynamicResource MahApps.Styles.Thumb.Slider.Flat}" />
+                    <mah:MetroThumb
+                        Width="{TemplateBinding Slider.MinHeight}"
+                        Background="{TemplateBinding Slider.BorderBrush}"
+                        Style="{DynamicResource MahApps.Styles.Thumb.Slider.Flat}" />
                 </Track.Thumb>
                 <Track.IncreaseRepeatButton>
-                    <RepeatButton Background="{TemplateBinding Slider.Background}"
-                                  Command="Slider.IncreaseLarge"
-                                  Style="{DynamicResource MahApps.Styles.RepeatButton.SliderTrack.Flat}" />
+                    <RepeatButton
+                        Background="{TemplateBinding Slider.Background}"
+                        Command="Slider.IncreaseLarge"
+                        Style="{DynamicResource MahApps.Styles.RepeatButton.SliderTrack.Flat}" />
                 </Track.IncreaseRepeatButton>
             </Track>
         </Grid>
@@ -110,29 +116,34 @@
                 <ColumnDefinition Width="*" MinWidth="{TemplateBinding Slider.MinWidth}" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <TickBar x:Name="TopTick"
-                     Grid.Column="0"
-                     Placement="Left"
-                     Style="{DynamicResource MahApps.Styles.TickBar.Slider.Flat}" />
-            <TickBar x:Name="BottomTick"
-                     Grid.Column="2"
-                     Placement="Right"
-                     Style="{DynamicResource MahApps.Styles.TickBar.Slider.Flat}" />
+            <TickBar
+                x:Name="TopTick"
+                Grid.Column="0"
+                Placement="Left"
+                Style="{DynamicResource MahApps.Styles.TickBar.Slider.Flat}" />
+            <TickBar
+                x:Name="BottomTick"
+                Grid.Column="2"
+                Placement="Right"
+                Style="{DynamicResource MahApps.Styles.TickBar.Slider.Flat}" />
             <Track x:Name="PART_Track" Grid.Column="1">
                 <Track.DecreaseRepeatButton>
-                    <RepeatButton Background="{TemplateBinding Slider.Foreground}"
-                                  Command="Slider.DecreaseLarge"
-                                  Style="{DynamicResource MahApps.Styles.RepeatButton.SliderTrack.Flat}" />
+                    <RepeatButton
+                        Background="{TemplateBinding Slider.Foreground}"
+                        Command="Slider.DecreaseLarge"
+                        Style="{DynamicResource MahApps.Styles.RepeatButton.SliderTrack.Flat}" />
                 </Track.DecreaseRepeatButton>
                 <Track.Thumb>
-                    <mah:MetroThumb Height="{TemplateBinding Slider.MinWidth}"
-                                    Background="{TemplateBinding Slider.BorderBrush}"
-                                    Style="{DynamicResource MahApps.Styles.Thumb.Slider.Flat}" />
+                    <mah:MetroThumb
+                        Height="{TemplateBinding Slider.MinWidth}"
+                        Background="{TemplateBinding Slider.BorderBrush}"
+                        Style="{DynamicResource MahApps.Styles.Thumb.Slider.Flat}" />
                 </Track.Thumb>
                 <Track.IncreaseRepeatButton>
-                    <RepeatButton Background="{TemplateBinding Slider.Background}"
-                                  Command="Slider.IncreaseLarge"
-                                  Style="{DynamicResource MahApps.Styles.RepeatButton.SliderTrack.Flat}" />
+                    <RepeatButton
+                        Background="{TemplateBinding Slider.Background}"
+                        Command="Slider.IncreaseLarge"
+                        Style="{DynamicResource MahApps.Styles.RepeatButton.SliderTrack.Flat}" />
                 </Track.IncreaseRepeatButton>
             </Track>
         </Grid>

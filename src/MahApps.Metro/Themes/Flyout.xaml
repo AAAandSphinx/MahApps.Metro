@@ -1,26 +1,28 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:actions="clr-namespace:MahApps.Metro.Actions"
-                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-                    xmlns:mah="clr-namespace:MahApps.Metro.Controls">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:actions="clr-namespace:MahApps.Metro.Actions"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls">
 
     <ControlTemplate x:Key="MahApps.Templates.Flyout.Header" TargetType="{x:Type mah:MetroThumbContentControl}">
         <Grid Background="{TemplateBinding Background}">
             <DockPanel Margin="{TemplateBinding Padding}" LastChildFill="True">
                 <!--  Material - ChevronLeft  -->
-                <Button x:Name="PART_BackButton"
-                        Width="34"
-                        Height="34"
-                        Margin="2 4 2 2"
-                        Padding="2 0 0 0"
-                        VerticalAlignment="Center"
-                        Content="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
-                        DockPanel.Dock="Left"
-                        Foreground="{TemplateBinding Foreground}"
-                        IsCancel="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:Flyout}}, Path=CloseButtonIsCancel}"
-                        Style="{DynamicResource MahApps.Styles.Button.Circle}"
-                        UseLayoutRounding="True"
-                        Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:Flyout}}, Path=CloseButtonVisibility}">
+                <Button
+                    x:Name="PART_BackButton"
+                    Width="34"
+                    Height="34"
+                    Margin="2,4,2,2"
+                    Padding="2,0,0,0"
+                    VerticalAlignment="Center"
+                    Content="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                    DockPanel.Dock="Left"
+                    Foreground="{TemplateBinding Foreground}"
+                    IsCancel="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:Flyout}}, Path=CloseButtonIsCancel}"
+                    Style="{DynamicResource MahApps.Styles.Button.Circle}"
+                    UseLayoutRounding="True"
+                    Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:Flyout}}, Path=CloseButtonVisibility}">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Click">
                             <actions:CloseFlyoutAction Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type mah:Flyout}}, Path=CloseCommand, Mode=OneWay}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type mah:Flyout}}, Path=CloseCommandParameter, Mode=OneWay}" />
@@ -28,29 +30,31 @@
                     </i:Interaction.Triggers>
                     <Button.ContentTemplate>
                         <DataTemplate>
-                            <mah:PathIcon Data="{Binding}"
-                                          FlowDirection="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:Flyout}}, Path=FlowDirection}"
-                                          UseLayoutRounding="True" />
+                            <mah:PathIcon
+                                Data="{Binding}"
+                                FlowDirection="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:Flyout}}, Path=FlowDirection}"
+                                UseLayoutRounding="True" />
                         </DataTemplate>
                     </Button.ContentTemplate>
                 </Button>
 
-                <mah:ContentControlEx x:Name="PART_BackHeaderText"
-                                      Margin="15 0 0 0"
-                                      HorizontalAlignment="Stretch"
-                                      VerticalAlignment="Stretch"
-                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                      Content="{TemplateBinding Content}"
-                                      ContentCharacterCasing="{TemplateBinding ContentCharacterCasing}"
-                                      ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                      ContentTemplate="{TemplateBinding ContentTemplate}"
-                                      ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
-                                      Focusable="False"
-                                      IsTabStop="False"
-                                      RecognizesAccessKey="{TemplateBinding RecognizesAccessKey}"
-                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                      Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:Flyout}}, Path=TitleVisibility}" />
+                <mah:ContentControlEx
+                    x:Name="PART_BackHeaderText"
+                    Margin="15,0,0,0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}"
+                    ContentCharacterCasing="{TemplateBinding ContentCharacterCasing}"
+                    ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                    ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                    Focusable="False"
+                    IsTabStop="False"
+                    RecognizesAccessKey="{TemplateBinding RecognizesAccessKey}"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                    Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:Flyout}}, Path=TitleVisibility}" />
             </DockPanel>
         </Grid>
         <ControlTemplate.Triggers>
@@ -58,55 +62,58 @@
                 <!--  Material - ChevronLeft  -->
                 <Setter TargetName="PART_BackButton" Property="Content" Value="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
                 <Setter TargetName="PART_BackButton" Property="DockPanel.Dock" Value="Right" />
-                <Setter TargetName="PART_BackButton" Property="Padding" Value="0 0 2 0" />
-                <Setter TargetName="PART_BackHeaderText" Property="Margin" Value="0 0 15 0" />
+                <Setter TargetName="PART_BackButton" Property="Padding" Value="0,0,2,0" />
+                <Setter TargetName="PART_BackHeaderText" Property="Margin" Value="0,0,15,0" />
             </DataTrigger>
 
             <DataTrigger Binding="{Binding Position, RelativeSource={RelativeSource AncestorType={x:Type mah:Flyout}}}" Value="Top">
                 <!--  Material - ChevronUp  -->
                 <Setter TargetName="PART_BackButton" Property="Content" Value="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
-                <Setter TargetName="PART_BackButton" Property="Padding" Value="0 0 0 2" />
+                <Setter TargetName="PART_BackButton" Property="Padding" Value="0,0,0,2" />
             </DataTrigger>
             <DataTrigger Binding="{Binding Position, RelativeSource={RelativeSource AncestorType={x:Type mah:Flyout}}}" Value="Bottom">
                 <!--  Material - ChevronDown  -->
                 <Setter TargetName="PART_BackButton" Property="Content" Value="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                <Setter TargetName="PART_BackButton" Property="Padding" Value="0 2 0 0" />
+                <Setter TargetName="PART_BackButton" Property="Padding" Value="0,2,0,0" />
             </DataTrigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
     <ControlTemplate x:Key="MahApps.Templates.Flyout" TargetType="{x:Type mah:Flyout}">
-        <Border x:Name="PART_Root"
-                Background="{TemplateBinding Background}"
-                BorderBrush="{TemplateBinding BorderBrush}"
-                BorderThickness="{TemplateBinding BorderThickness}">
+        <Border
+            x:Name="PART_Root"
+            Background="{TemplateBinding Background}"
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}">
             <Border.RenderTransform>
                 <TranslateTransform />
             </Border.RenderTransform>
             <AdornerDecorator>
                 <DockPanel FocusVisualStyle="{x:Null}" Focusable="False">
-                    <mah:MetroThumbContentControl x:Name="PART_Header"
-                                                  Padding="{TemplateBinding mah:HeaderedControlHelper.HeaderMargin}"
-                                                  HorizontalContentAlignment="{TemplateBinding mah:HeaderedControlHelper.HeaderHorizontalContentAlignment}"
-                                                  VerticalContentAlignment="{TemplateBinding mah:HeaderedControlHelper.HeaderVerticalContentAlignment}"
-                                                  Background="{TemplateBinding mah:HeaderedControlHelper.HeaderBackground}"
-                                                  Content="{TemplateBinding Header}"
-                                                  ContentCharacterCasing="{TemplateBinding mah:ControlsHelper.ContentCharacterCasing}"
-                                                  ContentStringFormat="{TemplateBinding HeaderStringFormat}"
-                                                  ContentTemplate="{TemplateBinding HeaderTemplate}"
-                                                  ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
-                                                  DockPanel.Dock="Top"
-                                                  FontFamily="{TemplateBinding mah:HeaderedControlHelper.HeaderFontFamily}"
-                                                  FontSize="{TemplateBinding mah:HeaderedControlHelper.HeaderFontSize}"
-                                                  FontStretch="{TemplateBinding mah:HeaderedControlHelper.HeaderFontStretch}"
-                                                  FontWeight="{TemplateBinding mah:HeaderedControlHelper.HeaderFontWeight}"
-                                                  Foreground="{TemplateBinding mah:HeaderedControlHelper.HeaderForeground}"
-                                                  RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
-                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                                  Template="{StaticResource MahApps.Templates.Flyout.Header}" />
-                    <ContentPresenter x:Name="PART_Content"
-                                      ContentSource="Content"
-                                      DockPanel.Dock="Bottom" />
+                    <mah:MetroThumbContentControl
+                        x:Name="PART_Header"
+                        Padding="{TemplateBinding mah:HeaderedControlHelper.HeaderMargin}"
+                        HorizontalContentAlignment="{TemplateBinding mah:HeaderedControlHelper.HeaderHorizontalContentAlignment}"
+                        VerticalContentAlignment="{TemplateBinding mah:HeaderedControlHelper.HeaderVerticalContentAlignment}"
+                        Background="{TemplateBinding mah:HeaderedControlHelper.HeaderBackground}"
+                        Content="{TemplateBinding Header}"
+                        ContentCharacterCasing="{TemplateBinding mah:ControlsHelper.ContentCharacterCasing}"
+                        ContentStringFormat="{TemplateBinding HeaderStringFormat}"
+                        ContentTemplate="{TemplateBinding HeaderTemplate}"
+                        ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
+                        DockPanel.Dock="Top"
+                        FontFamily="{TemplateBinding mah:HeaderedControlHelper.HeaderFontFamily}"
+                        FontSize="{TemplateBinding mah:HeaderedControlHelper.HeaderFontSize}"
+                        FontStretch="{TemplateBinding mah:HeaderedControlHelper.HeaderFontStretch}"
+                        FontWeight="{TemplateBinding mah:HeaderedControlHelper.HeaderFontWeight}"
+                        Foreground="{TemplateBinding mah:HeaderedControlHelper.HeaderForeground}"
+                        RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                        Template="{StaticResource MahApps.Templates.Flyout.Header}" />
+                    <ContentPresenter
+                        x:Name="PART_Content"
+                        ContentSource="Content"
+                        DockPanel.Dock="Bottom" />
                 </DockPanel>
             </AdornerDecorator>
             <VisualStateManager.VisualStateGroups>
@@ -114,93 +121,111 @@
                     <VisualState x:Name="Default" />
                     <VisualState x:Name="Hide">
                         <Storyboard x:Name="HideStoryboard">
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
-                                <SplineDoubleKeyFrame x:Name="hideFrame"
-                                                      KeySpline="0.25,1,0.05,1"
-                                                      KeyTime="00:00:00.750"
-                                                      Value="0" />
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                                <SplineDoubleKeyFrame
+                                    x:Name="hideFrame"
+                                    KeySpline="0.25,1,0.05,1"
+                                    KeyTime="00:00:00.750"
+                                    Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
-                                <SplineDoubleKeyFrame x:Name="hideFrameY"
-                                                      KeySpline="0.25,1,0.05,1"
-                                                      KeyTime="00:00:00.750"
-                                                      Value="0" />
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <SplineDoubleKeyFrame
+                                    x:Name="hideFrameY"
+                                    KeySpline="0.25,1,0.05,1"
+                                    KeyTime="00:00:00.750"
+                                    Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.Opacity)">
-                                <SplineDoubleKeyFrame x:Name="fadeOutFrame"
-                                                      KeySpline="0.25,1,0.05,1"
-                                                      KeyTime="00:00:00.750"
-                                                      Value="0" />
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <SplineDoubleKeyFrame
+                                    x:Name="fadeOutFrame"
+                                    KeySpline="0.25,1,0.05,1"
+                                    KeyTime="00:00:00.750"
+                                    Value="0" />
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
                     <VisualState x:Name="Show">
                         <Storyboard x:Name="ShowStoryboard">
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
-                                <SplineDoubleKeyFrame x:Name="showFrame"
-                                                      KeySpline="0.25,1,0.05,1"
-                                                      KeyTime="00:00:00.750"
-                                                      Value="0" />
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                                <SplineDoubleKeyFrame
+                                    x:Name="showFrame"
+                                    KeySpline="0.25,1,0.05,1"
+                                    KeyTime="00:00:00.750"
+                                    Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
-                                <SplineDoubleKeyFrame x:Name="showFrameY"
-                                                      KeySpline="0.25,1,0.05,1"
-                                                      KeyTime="00:00:00.750"
-                                                      Value="0" />
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <SplineDoubleKeyFrame
+                                    x:Name="showFrameY"
+                                    KeySpline="0.25,1,0.05,1"
+                                    KeyTime="00:00:00.750"
+                                    Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.Opacity)">
-                                <SplineDoubleKeyFrame KeySpline="0.25,1,0.05,1"
-                                                      KeyTime="00:00:00.750"
-                                                      Value="1" />
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <SplineDoubleKeyFrame
+                                    KeySpline="0.25,1,0.05,1"
+                                    KeyTime="00:00:00.750"
+                                    Value="1" />
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
                     <VisualState x:Name="HideDirect">
                         <Storyboard>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
                                 <SplineDoubleKeyFrame KeyTime="0" Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
                                 <SplineDoubleKeyFrame KeyTime="0" Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.Opacity)">
                                 <SplineDoubleKeyFrame KeyTime="0" Value="0" />
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
                     <VisualState x:Name="ShowDirect">
                         <Storyboard>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
                                 <SplineDoubleKeyFrame KeyTime="0" Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
                                 <SplineDoubleKeyFrame KeyTime="0" Value="0" />
                             </DoubleAnimationUsingKeyFrames>
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
-                                                           Storyboard.TargetName="PART_Root"
-                                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                            <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Storyboard.TargetName="PART_Root"
+                                Storyboard.TargetProperty="(UIElement.Opacity)">
                                 <SplineDoubleKeyFrame KeyTime="0" Value="1" />
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>

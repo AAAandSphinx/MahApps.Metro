@@ -1,8 +1,9 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:mah="clr-namespace:MahApps.Metro.Controls"
-                    xmlns:mahConverters="clr-namespace:MahApps.Metro.Converters"
-                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls"
+    xmlns:mahConverters="clr-namespace:MahApps.Metro.Converters"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
 
     <!--  ********************************** CheckBoxStyle **********************************  -->
     <system:Double x:Key="CheckBoxBorderThemeThickness">2</system:Double>
@@ -19,55 +20,60 @@
         <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.CheckBox.ForegroundUnchecked}" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
-        <Setter Property="Padding" Value="6 0 0 0" />
+        <Setter Property="Padding" Value="6,0,0,0" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="CheckBox">
                     <Grid>
-                        <Border x:Name="RootBorder"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        <Border
+                            x:Name="RootBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding mah:ControlsHelper.CornerRadius}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         <Grid Margin="{TemplateBinding BorderThickness}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition x:Name="LeftCol" Width="Auto" />
                                 <ColumnDefinition x:Name="RightCol" Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Grid x:Name="Check"
-                                  Grid.Column="0"
-                                  Width="{TemplateBinding mah:CheckBoxHelper.CheckSize}"
-                                  Height="{TemplateBinding mah:CheckBoxHelper.CheckSize}"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                                <Rectangle x:Name="NormalRectangle"
-                                           Fill="{TemplateBinding mah:CheckBoxHelper.CheckBackgroundFillUnchecked}"
-                                           RadiusX="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:CheckBoxHelper.CheckCornerRadius), Mode=OneWay, Converter={StaticResource CornerRadiusTopLeftConverter}}"
-                                           RadiusY="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:CheckBoxHelper.CheckCornerRadius), Mode=OneWay, Converter={StaticResource CornerRadiusBottomRightConverter}}"
-                                           Stroke="{TemplateBinding mah:CheckBoxHelper.CheckBackgroundStrokeUnchecked}"
-                                           StrokeThickness="{TemplateBinding mah:CheckBoxHelper.CheckStrokeThickness}"
-                                           UseLayoutRounding="False" />
-                                <ContentControl x:Name="CheckGlyph"
-                                                Content="{TemplateBinding mah:CheckBoxHelper.CheckGlyphUnchecked}"
-                                                ContentTemplate="{TemplateBinding mah:CheckBoxHelper.CheckGlyphUncheckedTemplate}"
-                                                Focusable="False"
-                                                Foreground="{TemplateBinding mah:CheckBoxHelper.CheckGlyphForegroundUnchecked}"
-                                                IsTabStop="False" />
+                            <Grid
+                                x:Name="Check"
+                                Grid.Column="0"
+                                Width="{TemplateBinding mah:CheckBoxHelper.CheckSize}"
+                                Height="{TemplateBinding mah:CheckBoxHelper.CheckSize}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                <Rectangle
+                                    x:Name="NormalRectangle"
+                                    Fill="{TemplateBinding mah:CheckBoxHelper.CheckBackgroundFillUnchecked}"
+                                    RadiusX="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:CheckBoxHelper.CheckCornerRadius), Mode=OneWay, Converter={StaticResource CornerRadiusTopLeftConverter}}"
+                                    RadiusY="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mah:CheckBoxHelper.CheckCornerRadius), Mode=OneWay, Converter={StaticResource CornerRadiusBottomRightConverter}}"
+                                    Stroke="{TemplateBinding mah:CheckBoxHelper.CheckBackgroundStrokeUnchecked}"
+                                    StrokeThickness="{TemplateBinding mah:CheckBoxHelper.CheckStrokeThickness}"
+                                    UseLayoutRounding="False" />
+                                <ContentControl
+                                    x:Name="CheckGlyph"
+                                    Content="{TemplateBinding mah:CheckBoxHelper.CheckGlyphUnchecked}"
+                                    ContentTemplate="{TemplateBinding mah:CheckBoxHelper.CheckGlyphUncheckedTemplate}"
+                                    Focusable="False"
+                                    Foreground="{TemplateBinding mah:CheckBoxHelper.CheckGlyphForegroundUnchecked}"
+                                    IsTabStop="False" />
                             </Grid>
-                            <ContentPresenter x:Name="ContentPresenter"
-                                              Grid.Column="1"
-                                              Margin="{TemplateBinding Padding}"
-                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                              Content="{TemplateBinding Content}"
-                                              ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                              ContentTemplate="{TemplateBinding ContentTemplate}"
-                                              ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
-                                              RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
-                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            <ContentPresenter
+                                x:Name="ContentPresenter"
+                                Grid.Column="1"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -339,12 +345,13 @@
         <Setter Property="mah:CheckBoxHelper.CheckGlyphCheckedTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <Path Width="12"
-                          Height="10"
-                          Data="M 1145.607177734375,430 C1145.607177734375,430 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1138,434.5538330078125 1138,434.5538330078125 1138,434.5538330078125 1141.482177734375,438 1141.482177734375,438 1141.482177734375,438 1141.96875,437.9375 1141.96875,437.9375 1141.96875,437.9375 1147,431.34619140625 1147,431.34619140625 1147,431.34619140625 1145.607177734375,430 1145.607177734375,430 z"
-                          Fill="{Binding RelativeSource={RelativeSource AncestorType=ContentControl}, Path=Foreground}"
-                          Stretch="Fill"
-                          UseLayoutRounding="False" />
+                    <Path
+                        Width="12"
+                        Height="10"
+                        Data="M 1145.607177734375,430 C1145.607177734375,430 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1138,434.5538330078125 1138,434.5538330078125 1138,434.5538330078125 1141.482177734375,438 1141.482177734375,438 1141.482177734375,438 1141.96875,437.9375 1141.96875,437.9375 1141.96875,437.9375 1147,431.34619140625 1147,431.34619140625 1147,431.34619140625 1145.607177734375,430 1145.607177734375,430 z"
+                        Fill="{Binding RelativeSource={RelativeSource AncestorType=ContentControl}, Path=Foreground}"
+                        Stretch="Fill"
+                        UseLayoutRounding="False" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
@@ -363,10 +370,11 @@
         <Setter Property="mah:CheckBoxHelper.CheckGlyphIndeterminateTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <Rectangle Width="8"
-                               Height="3"
-                               Fill="{Binding RelativeSource={RelativeSource AncestorType=ContentControl}, Path=Foreground}"
-                               UseLayoutRounding="False" />
+                    <Rectangle
+                        Width="8"
+                        Height="3"
+                        Fill="{Binding RelativeSource={RelativeSource AncestorType=ContentControl}, Path=Foreground}"
+                        UseLayoutRounding="False" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
@@ -385,14 +393,15 @@
         <Style.Triggers>
             <Trigger Property="mah:ToggleButtonHelper.ContentDirection" Value="RightToLeft">
                 <Setter Property="HorizontalContentAlignment" Value="Right" />
-                <Setter Property="Padding" Value="0 0 6 0" />
+                <Setter Property="Padding" Value="0,0,6,0" />
             </Trigger>
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="MahApps.Styles.CheckBox.MultiSelectionComboBoxItem"
-           BasedOn="{StaticResource MahApps.Styles.CheckBox}"
-           TargetType="CheckBox">
+    <Style
+        x:Key="MahApps.Styles.CheckBox.MultiSelectionComboBoxItem"
+        BasedOn="{StaticResource MahApps.Styles.CheckBox}"
+        TargetType="CheckBox">
         <Setter Property="mah:CheckBoxHelper.CheckBackgroundFillChecked" Value="{DynamicResource MahApps.Brushes.CheckBox.CheckBackgroundFillChecked}" />
         <Setter Property="mah:CheckBoxHelper.CheckBackgroundFillCheckedDisabled" Value="{DynamicResource MahApps.Brushes.CheckBox.CheckBackgroundFillCheckedDisabled}" />
         <Setter Property="mah:CheckBoxHelper.CheckBackgroundFillCheckedMouseOver" Value="{DynamicResource MahApps.Brushes.CheckBox.CheckBackgroundFillCheckedMouseOver}" />
@@ -431,12 +440,13 @@
         <Setter Property="mah:CheckBoxHelper.CheckGlyphForegroundUncheckedPressed" Value="{DynamicResource MahApps.Brushes.CheckBox.CheckGlyphForegroundUncheckedPressed}" />
     </Style>
 
-    <Style x:Key="MahApps.Styles.CheckBox.Win10"
-           BasedOn="{StaticResource MahApps.Styles.CheckBox}"
-           TargetType="CheckBox">
+    <Style
+        x:Key="MahApps.Styles.CheckBox.Win10"
+        BasedOn="{StaticResource MahApps.Styles.CheckBox}"
+        TargetType="CheckBox">
         <Setter Property="MinHeight" Value="32" />
         <Setter Property="MinWidth" Value="120" />
-        <Setter Property="Padding" Value="8 0 0 0" />
+        <Setter Property="Padding" Value="8,0,0,0" />
         <Setter Property="mah:CheckBoxHelper.BackgroundChecked" Value="{DynamicResource MahApps.Brushes.CheckBox.BackgroundChecked}" />
         <Setter Property="mah:CheckBoxHelper.BackgroundCheckedDisabled" Value="{DynamicResource MahApps.Brushes.CheckBox.BackgroundCheckedDisabled}" />
         <Setter Property="mah:CheckBoxHelper.BackgroundCheckedMouseOver" Value="{DynamicResource MahApps.Brushes.CheckBox.BackgroundCheckedMouseOver}" />
@@ -488,11 +498,12 @@
         <Setter Property="mah:CheckBoxHelper.CheckGlyphCheckedTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <mah:FontIcon x:Name="CheckGlyphCheckedFontIcon"
-                                  FontFamily="{DynamicResource MahApps.Fonts.Family.SymbolTheme}"
-                                  FontSize="20"
-                                  Glyph="&#xE001;"
-                                  UseLayoutRounding="False" />
+                    <mah:FontIcon
+                        x:Name="CheckGlyphCheckedFontIcon"
+                        FontFamily="{DynamicResource MahApps.Fonts.Family.SymbolTheme}"
+                        FontSize="20"
+                        Glyph="&#xE001;"
+                        UseLayoutRounding="False" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
@@ -511,11 +522,12 @@
         <Setter Property="mah:CheckBoxHelper.CheckGlyphIndeterminateTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <mah:FontIcon x:Name="CheckGlyphIndeterminateFontIcon"
-                                  FontFamily="{DynamicResource MahApps.Fonts.Family.SymbolTheme}"
-                                  FontSize="20"
-                                  Glyph="&#xE73C;"
-                                  UseLayoutRounding="False" />
+                    <mah:FontIcon
+                        x:Name="CheckGlyphIndeterminateFontIcon"
+                        FontFamily="{DynamicResource MahApps.Fonts.Family.SymbolTheme}"
+                        FontSize="20"
+                        Glyph="&#xE73C;"
+                        UseLayoutRounding="False" />
                 </DataTemplate>
             </Setter.Value>
         </Setter>
@@ -563,7 +575,7 @@
 
             <Trigger Property="mah:ToggleButtonHelper.ContentDirection" Value="RightToLeft">
                 <Setter Property="HorizontalContentAlignment" Value="Right" />
-                <Setter Property="Padding" Value="0 0 8 0" />
+                <Setter Property="Padding" Value="0,0,8,0" />
             </Trigger>
         </Style.Triggers>
     </Style>

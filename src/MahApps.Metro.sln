@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.11.35312.102
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MahApps.Metro", "MahApps.Metro\MahApps.Metro.csproj", "{F6432F90-04C2-42B9-992B-CD828729976B}"
 EndProject
@@ -21,6 +21,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 		..\NuGet.Config = ..\NuGet.Config
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahApps.Metro.Extensions", "MahApps.Metro.Extensions\MahApps.Metro.Extensions.csproj", "{EB2CC9EC-1CC3-4520-9A39-1E401C65E6F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{A878134B-04BA-47F3-B60C-F85C5EC6E4F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{93218025-D455-4E7C-8D70-C3C5E204070D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahApps.Metro.Extension.Demo", "MahApps.Metro.Extension.Demo\MahApps.Metro.Extension.Demo.csproj", "{33F0EA77-EE03-47D6-9C0A-1800782A16C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,9 +52,23 @@ Global
 		{40048BCF-D1C7-46CC-B781-05718BE25BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40048BCF-D1C7-46CC-B781-05718BE25BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40048BCF-D1C7-46CC-B781-05718BE25BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB2CC9EC-1CC3-4520-9A39-1E401C65E6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2CC9EC-1CC3-4520-9A39-1E401C65E6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2CC9EC-1CC3-4520-9A39-1E401C65E6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2CC9EC-1CC3-4520-9A39-1E401C65E6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F0EA77-EE03-47D6-9C0A-1800782A16C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F0EA77-EE03-47D6-9C0A-1800782A16C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F0EA77-EE03-47D6-9C0A-1800782A16C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F0EA77-EE03-47D6-9C0A-1800782A16C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A83B4603-02BF-43FA-8EE8-606D6DAC8B3D} = {A878134B-04BA-47F3-B60C-F85C5EC6E4F2}
+		{D9ACF0D0-A178-4C91-BD23-D013CEA763A0} = {A878134B-04BA-47F3-B60C-F85C5EC6E4F2}
+		{40048BCF-D1C7-46CC-B781-05718BE25BFC} = {93218025-D455-4E7C-8D70-C3C5E204070D}
+		{33F0EA77-EE03-47D6-9C0A-1800782A16C9} = {A878134B-04BA-47F3-B60C-F85C5EC6E4F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {002611DA-9902-44B8-96DC-ED7107FAB879}

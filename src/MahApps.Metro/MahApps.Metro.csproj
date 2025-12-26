@@ -20,6 +20,7 @@
         <RepositoryUrl>https://github.com/MahApps/MahApps.Metro.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <GenerateLibraryLayout>true</GenerateLibraryLayout>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
@@ -53,6 +54,10 @@
     <ItemGroup>
         <None Include="VisualStudioToolsManifest.xml" Pack="true" PackagePath="tools" />
         <UpToDateCheckInput Include="**/*.xaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MahApps.Metro.Extensions\MahApps.Metro.Extensions.csproj" />
     </ItemGroup>
 
     <ItemGroup>

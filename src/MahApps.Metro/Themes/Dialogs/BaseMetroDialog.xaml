@@ -1,36 +1,40 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs"
-                    xmlns:mah="clr-namespace:MahApps.Metro.Controls"
-                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
-                    mc:Ignorable="po">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+    mc:Ignorable="po">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Buttons.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="MahApps.Styles.Button.Dialogs"
-           BasedOn="{StaticResource MahApps.Styles.Button.Square}"
-           TargetType="{x:Type ButtonBase}">
+    <Style
+        x:Key="MahApps.Styles.Button.Dialogs"
+        BasedOn="{StaticResource MahApps.Styles.Button.Square}"
+        TargetType="{x:Type ButtonBase}">
         <Setter Property="MinHeight" Value="35" />
         <Setter Property="MinWidth" Value="80" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="mah:ControlsHelper.ContentCharacterCasing" Value="{DynamicResource MahApps.CharacterCasing.Button.Dialogs}" />
     </Style>
 
-    <Style x:Key="MahApps.Styles.Button.Dialogs.Accent"
-           BasedOn="{StaticResource MahApps.Styles.Button.Square.Accent}"
-           TargetType="{x:Type ButtonBase}">
+    <Style
+        x:Key="MahApps.Styles.Button.Dialogs.Accent"
+        BasedOn="{StaticResource MahApps.Styles.Button.Square.Accent}"
+        TargetType="{x:Type ButtonBase}">
         <Setter Property="MinHeight" Value="35" />
         <Setter Property="MinWidth" Value="80" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="mah:ControlsHelper.ContentCharacterCasing" Value="{DynamicResource MahApps.CharacterCasing.Button.Dialogs.Accent}" />
     </Style>
 
-    <Style x:Key="MahApps.Styles.Button.Dialogs.AccentHighlight"
-           BasedOn="{StaticResource MahApps.Styles.Button.Square.Highlight}"
-           TargetType="{x:Type ButtonBase}">
+    <Style
+        x:Key="MahApps.Styles.Button.Dialogs.AccentHighlight"
+        BasedOn="{StaticResource MahApps.Styles.Button.Square.Highlight}"
+        TargetType="{x:Type ButtonBase}">
         <Setter Property="MinHeight" Value="35" />
         <Setter Property="MinWidth" Value="80" />
         <Setter Property="VerticalAlignment" Value="Center" />
@@ -38,19 +42,21 @@
     </Style>
 
     <Storyboard x:Key="MahApps.Storyboard.Dialogs.Show" po:Freeze="True">
-        <DoubleAnimation AccelerationRatio=".9"
-                         BeginTime="0:0:0"
-                         Storyboard.TargetProperty="Opacity"
-                         To="1"
-                         Duration="0:0:0.2" />
+        <DoubleAnimation
+            AccelerationRatio=".9"
+            BeginTime="0:0:0"
+            Storyboard.TargetProperty="Opacity"
+            To="1"
+            Duration="0:0:0.2" />
     </Storyboard>
 
     <Storyboard x:Key="MahApps.Storyboard.Dialogs.Close" po:Freeze="True">
-        <DoubleAnimation AccelerationRatio=".9"
-                         BeginTime="0:0:0"
-                         Storyboard.TargetProperty="Opacity"
-                         To="0"
-                         Duration="0:0:0.2" />
+        <DoubleAnimation
+            AccelerationRatio=".9"
+            BeginTime="0:0:0"
+            Storyboard.TargetProperty="Opacity"
+            To="0"
+            Duration="0:0:0.2" />
     </Storyboard>
 
     <ControlTemplate x:Key="MahApps.Templates.BaseMetroDialog" TargetType="{x:Type dialogs:BaseMetroDialog}">
@@ -60,11 +66,12 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <ContentPresenter x:Name="PART_Top"
-                              Grid.Row="0"
-                              AutomationProperties.Name="Dialog top"
-                              Content="{TemplateBinding DialogTop}"
-                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+            <ContentPresenter
+                x:Name="PART_Top"
+                Grid.Row="0"
+                AutomationProperties.Name="Dialog top"
+                Content="{TemplateBinding DialogTop}"
+                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
 
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -79,12 +86,13 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <ContentPresenter x:Name="PART_Title"
-                                      Grid.Row="0"
-                                      AutomationProperties.Name="Dialog title"
-                                      Content="{TemplateBinding Title}"
-                                      TextElement.FontSize="{TemplateBinding DialogTitleFontSize}"
-                                      TextElement.Foreground="{TemplateBinding Foreground}">
+                    <ContentPresenter
+                        x:Name="PART_Title"
+                        Grid.Row="0"
+                        AutomationProperties.Name="Dialog title"
+                        Content="{TemplateBinding Title}"
+                        TextElement.FontSize="{TemplateBinding DialogTitleFontSize}"
+                        TextElement.Foreground="{TemplateBinding Foreground}">
                         <ContentPresenter.Resources>
                             <Style BasedOn="{StaticResource {x:Type TextBlock}}" TargetType="TextBlock">
                                 <Setter Property="TextWrapping" Value="Wrap" />
@@ -92,24 +100,26 @@
                         </ContentPresenter.Resources>
                     </ContentPresenter>
 
-                    <ContentPresenter x:Name="PART_Content"
-                                      Grid.Row="1"
-                                      HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                      AutomationProperties.Name="Dialog content"
-                                      Content="{TemplateBinding Content}"
-                                      ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                      ContentTemplate="{TemplateBinding ContentTemplate}"
-                                      ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
-                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    <ContentPresenter
+                        x:Name="PART_Content"
+                        Grid.Row="1"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        AutomationProperties.Name="Dialog content"
+                        Content="{TemplateBinding Content}"
+                        ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                        ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                 </Grid>
             </Grid>
 
-            <ContentPresenter x:Name="PART_Bottom"
-                              Grid.Row="2"
-                              AutomationProperties.Name="Dialog bottom"
-                              Content="{TemplateBinding DialogBottom}"
-                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+            <ContentPresenter
+                x:Name="PART_Bottom"
+                Grid.Row="2"
+                AutomationProperties.Name="Dialog bottom"
+                Content="{TemplateBinding DialogBottom}"
+                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="Title" Value="{x:Null}">
@@ -136,7 +146,7 @@
         <Setter Property="KeyboardNavigation.DirectionalNavigation" Value="Cycle" />
         <Setter Property="KeyboardNavigation.TabNavigation" Value="Cycle" />
         <Setter Property="Opacity" Value="0" />
-        <Setter Property="Padding" Value="0 10 0 0" />
+        <Setter Property="Padding" Value="0,10,0,0" />
         <Setter Property="Template" Value="{StaticResource MahApps.Templates.BaseMetroDialog}" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
