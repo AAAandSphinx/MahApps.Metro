@@ -21,7 +21,16 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <metro:PropertyGrid Grid.Row="1" SelectedObject="{Binding PropertyGridModel}" />
+                    <metro:PropertyGrid Grid.Row="1" SelectedObject="{Binding PropertyGridModel}" Visibility="Collapsed"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ImageSelector">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <metro:ImageSelector Grid.Row="1"  />
                 </Grid>
             </TabItem>
         </TabControl>

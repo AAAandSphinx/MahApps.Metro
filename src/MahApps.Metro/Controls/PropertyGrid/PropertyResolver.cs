@@ -69,7 +69,9 @@ namespace MahApps.Metro.Controls
 
         public PropertyEditorBase ResolveEditor(PropertyDescriptor propertyDescriptor)
         {
+            //属性可标记Editor特性
             var editorAttribute = propertyDescriptor.Attributes.OfType<EditorAttribute>().FirstOrDefault();
+            //如果没有标记或类型名称为空，则根据类型创建编辑控件
             var editor = editorAttribute == null || string.IsNullOrEmpty(editorAttribute.EditorTypeName)
                 ? CreateDefaultEditor(propertyDescriptor.PropertyType)
                 : CreateEditor(Type.GetType(editorAttribute.EditorTypeName)!);

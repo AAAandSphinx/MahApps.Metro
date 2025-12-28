@@ -57,6 +57,7 @@
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/ColorPicker/ColorPicker.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/MultiSelectionComboBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/PropertyGrid.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/ImageSelectorStyle.xaml" />
 
     </ResourceDictionary.MergedDictionaries>
 

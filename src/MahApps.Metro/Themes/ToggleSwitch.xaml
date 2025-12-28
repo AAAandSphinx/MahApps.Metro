@@ -434,4 +434,6 @@
         <Setter Property="mah:HeaderedControlHelper.HeaderMargin" Value="{DynamicResource ToggleSwitchTopHeaderMargin}" />
     </Style>
 
+
+
 </ResourceDictionary>
