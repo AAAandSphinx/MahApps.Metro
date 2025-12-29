@@ -19,7 +19,17 @@ namespace MahApps.Metro.Extension.Demo.Models
         public EType EQType { get; set; } = EType.OUT;
         public float Width { get; set; } = 100f;
         [Category("PictureA")]
-        public ImageSource PictureACTS { get; set; }  
+        public ImageSource PictureACTS { get; set; }
+        [Category("PictureA")]
+        public ImageSource PictureACTS1 { get; set; }
+        [Category("PictureA")]
+        public ImageSource PictureACTS2 { get; set; }
+        [Category("PictureA")]
+        public ImageSource PictureACTS3 { get; set; }
+        [Category("PictureA")]
+        public ImageSource PictureACTS4 { get; set; }
+        [Category("PictureA")]
+        public ImageSource PictureACTS5 { get; set; }
         [Category("DateTime")]
         public DateTime CreateTime { get; set; }
     }

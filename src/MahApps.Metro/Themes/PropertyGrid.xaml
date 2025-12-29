@@ -50,19 +50,26 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ctrls:PropertyItem">
-                    <GroupBox>
-                        <GroupBox.Header>
-                            <TextBlock
-                                Padding="0,0,10,0"
-                                Text="{TemplateBinding DisplayName}"
-                                TextTrimming="CharacterEllipsis">
-                                <TextBlock.ToolTip>
-                                    <ToolTip Content="{TemplateBinding Description}" Style="{StaticResource PropertyItemToolTipBaseStyle}" />
-                                </TextBlock.ToolTip>
-                            </TextBlock>
-                        </GroupBox.Header>
-                        <ContentPresenter ContentSource="EditorElement" />
-                    </GroupBox>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                            Padding="0,0,10,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Text="{TemplateBinding DisplayName}"
+                            TextTrimming="CharacterEllipsis">
+                            <TextBlock.ToolTip>
+                                <ToolTip Content="{TemplateBinding Description}" Style="{StaticResource PropertyItemToolTipBaseStyle}" />
+                            </TextBlock.ToolTip>
+                        </TextBlock>
+                        <ContentPresenter
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            ContentSource="EditorElement" />
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -303,7 +310,7 @@
 
     <!--<tools:ComboBoxItemCapsuleStyleSelector x:Key="ComboBoxItemCapsuleStyleSelector"/>-->
 
-    <Style
+    <!--<Style
         x:Key="ComboBoxCapsule"
         BasedOn="{x:Null}"
         TargetType="ComboBox">
@@ -322,7 +329,7 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
+    </Style>-->
 
     <!--<hc:HorizontalAlignmentPathTemplateSelector x:Key="HorizontalAlignmentPathTemplateSelector"/>
     <hc:VerticalAlignmentPathTemplateSelector x:Key="VerticalAlignmentPathTemplateSelector"/>-->

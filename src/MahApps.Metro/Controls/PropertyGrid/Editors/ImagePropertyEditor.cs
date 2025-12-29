@@ -51,7 +51,7 @@ public class ImagePropertyEditor : PropertyEditorBase
     public override void CreateBinding(PropertyItem propertyItem, DependencyObject element)
     {
         BindingOperations.SetBinding(this, GetDependencyProperty(),
-            new Binding($"({propertyItem.PropertyName})")
+            new Binding($"{propertyItem.PropertyName}")
             {
                 Source = propertyItem.Value,
                 Mode = GetBindingMode(propertyItem),

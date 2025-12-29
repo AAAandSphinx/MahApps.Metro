@@ -21,6 +21,12 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Button
+                            Command="{Binding OnSerialize}"
+                            Content="ACCENT"
+                            Style="{DynamicResource MahApps.Styles.Button.Accent.Win10}" />
+                    </StackPanel>
                     <metro:PropertyGrid
                         Grid.Row="1"
                         SelectedObject="{Binding PropertyGridModel}"
@@ -33,6 +39,7 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
+
                     <metro:ImageSelector Grid.Row="1" />
                 </Grid>
             </metro:MetroTabItem>
