@@ -11,7 +11,7 @@ public class ImagePropertyEditor : PropertyEditorBase
     public override FrameworkElement CreateElement(PropertyItem propertyItem)
     {
         var imageSelector = new ImageSelector
-        {
+        { 
             IsEnabled = !propertyItem.IsReadOnly,
             Width = 50,
             Height = 50,
@@ -31,11 +31,11 @@ public class ImagePropertyEditor : PropertyEditorBase
         nameof(Uri), typeof(Uri), typeof(ImagePropertyEditor), new PropertyMetadata(default(Uri), OnUriChangedCallback));
 
     private static void OnUriChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e) =>
-        ((ImagePropertyEditor) d).Source = e.NewValue is Uri uri ? BitmapFrame.Create(uri) : null!;
+        ((ImagePropertyEditor)d).Source = e.NewValue is Uri uri ? BitmapFrame.Create(uri) : null!;
 
     internal Uri? Uri
     {
-        get => (Uri?) GetValue(UriProperty);
+        get => (Uri?)GetValue(UriProperty);
         set => SetValue(UriProperty, value);
     }
 
@@ -44,7 +44,7 @@ public class ImagePropertyEditor : PropertyEditorBase
 
     public ImageSource? Source
     {
-        get => (ImageSource?) GetValue(SourceProperty);
+        get => (ImageSource?)GetValue(SourceProperty);
         set => SetValue(SourceProperty, value);
     }
 
@@ -59,6 +59,6 @@ public class ImagePropertyEditor : PropertyEditorBase
                 Converter = GetConverter(propertyItem)
             });
     }
-     
+
     public override DependencyProperty GetDependencyProperty() => SourceProperty;
 }

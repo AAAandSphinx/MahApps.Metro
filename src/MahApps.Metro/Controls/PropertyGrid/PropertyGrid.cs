@@ -191,20 +191,22 @@ public class PropertyGrid : Control
         }
     }
 
-    protected virtual PropertyItem CreatePropertyItem(PropertyDescriptor propertyDescriptor) => new()
+    protected virtual PropertyItem CreatePropertyItem(PropertyDescriptor propertyDescriptor)
     {
-        Category = PropertyResolver.ResolveCategory(propertyDescriptor),
-        DisplayName = PropertyResolver.ResolveDisplayName(propertyDescriptor),
-        Description = PropertyResolver.ResolveDescription(propertyDescriptor),
-        IsReadOnly = PropertyResolver.ResolveIsReadOnly(propertyDescriptor),
-        DefaultValue = PropertyResolver.ResolveDefaultValue(propertyDescriptor),
-        Editor = PropertyResolver.ResolveEditor(propertyDescriptor),
-        Value = SelectedObject,
-        PropertyName = propertyDescriptor.Name,
-        PropertyType = propertyDescriptor.PropertyType,
-        PropertyTypeName = $"{propertyDescriptor.PropertyType.Namespace}.{propertyDescriptor.PropertyType.Name}"
-    };
-
+        return new()
+        {
+            Category = PropertyResolver.ResolveCategory(propertyDescriptor),
+            DisplayName = PropertyResolver.ResolveDisplayName(propertyDescriptor),
+            Description = PropertyResolver.ResolveDescription(propertyDescriptor),
+            IsReadOnly = PropertyResolver.ResolveIsReadOnly(propertyDescriptor),
+            DefaultValue = PropertyResolver.ResolveDefaultValue(propertyDescriptor),
+            Editor = PropertyResolver.ResolveEditor(propertyDescriptor),
+            Value = SelectedObject,
+            PropertyName = propertyDescriptor.Name,
+            PropertyType = propertyDescriptor.PropertyType,
+            PropertyTypeName = $"{propertyDescriptor.PropertyType.Namespace}.{propertyDescriptor.PropertyType.Name}"
+        };
+    } 
     protected override void OnRenderSizeChanged(SizeChangedInfo sizeInfo)
     {
         base.OnRenderSizeChanged(sizeInfo);

@@ -6,7 +6,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using MahApps.Metro.ValueBoxes;
 using Microsoft.Win32;
-
+#nullable disable
 namespace MahApps.Metro.Controls;
 
 public class ImageSelector : Control
@@ -81,9 +81,9 @@ public class ImageSelector : Control
 
     public static readonly DependencyProperty UriProperty = UriPropertyKey.DependencyProperty;
 
-    public Uri? Uri
+    public Uri Uri
     {
-        get => (Uri?)GetValue(UriProperty);
+        get => (Uri)GetValue(UriProperty);
         set => SetValue(UriPropertyKey, value);
     }
 
@@ -92,9 +92,9 @@ public class ImageSelector : Control
 
     public static readonly DependencyProperty PreviewBrushProperty = PreviewBrushPropertyKey.DependencyProperty;
 
-    public Brush? PreviewBrush
+    public Brush PreviewBrush
     {
-        get => (Brush?)GetValue(PreviewBrushProperty);
+        get => (Brush)GetValue(PreviewBrushProperty);
         set => SetValue(PreviewBrushPropertyKey, value);
     }
 
@@ -110,9 +110,9 @@ public class ImageSelector : Control
     public static readonly DependencyProperty StrokeDashArrayProperty = DependencyProperty.Register(
         nameof(StrokeDashArray), typeof(DoubleCollection), typeof(ImageSelector), new FrameworkPropertyMetadata(default(DoubleCollection), FrameworkPropertyMetadataOptions.AffectsRender));
 
-    public DoubleCollection? StrokeDashArray
+    public DoubleCollection StrokeDashArray
     {
-        get => (DoubleCollection?)GetValue(StrokeDashArrayProperty);
+        get => (DoubleCollection)GetValue(StrokeDashArrayProperty);
         set => SetValue(StrokeDashArrayProperty, value);
     }
 

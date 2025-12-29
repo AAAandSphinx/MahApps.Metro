@@ -18,8 +18,8 @@ namespace MahApps.Metro.Extension.Demo.Models
         public bool IsCheck { get; set; } = false;
         public EType EQType { get; set; } = EType.OUT;
         public float Width { get; set; } = 100f;
-        [Category("Picture")]
-        public ImageSource Picture { get; set; }  
+        [Category("PictureA")]
+        public ImageSource PictureACTS { get; set; }  
         [Category("DateTime")]
         public DateTime CreateTime { get; set; }
     }
