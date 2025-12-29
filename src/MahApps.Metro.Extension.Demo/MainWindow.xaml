@@ -14,25 +14,28 @@
         <local:MainWindowViewModel />
     </metro:MetroWindow.DataContext>
     <Grid>
-        <TabControl Style="{StaticResource MahApps.Styles.TabControl.Animated}">
-            <TabItem Header="PropertyGrid">
+        <metro:MetroTabControl metro:TabControlHelper.Underlined="TabPanel" Style="{StaticResource MahApps.Styles.TabControl.Animated}">
+            <metro:MetroTabItem Header="PropertyGrid">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <metro:PropertyGrid Grid.Row="1" SelectedObject="{Binding PropertyGridModel}" Visibility="Collapsed"/>
+                    <metro:PropertyGrid
+                        Grid.Row="1"
+                        SelectedObject="{Binding PropertyGridModel}"
+                        Visibility="Visible" />
                 </Grid>
-            </TabItem>
-            <TabItem Header="ImageSelector">
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="ImageSelector">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <metro:ImageSelector Grid.Row="1"  />
+                    <metro:ImageSelector Grid.Row="1" />
                 </Grid>
-            </TabItem>
-        </TabControl>
+            </metro:MetroTabItem>
+        </metro:MetroTabControl>
     </Grid>
 </metro:MetroWindow>

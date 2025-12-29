@@ -104,5 +104,6 @@
     <Style BasedOn="{StaticResource MahApps.Styles.GridSplitter}" TargetType="GridSplitter" />
     <Style BasedOn="{StaticResource MahApps.Styles.ToolBar}" TargetType="ToolBar" />
     <Style BasedOn="{StaticResource MahApps.Styles.ToolBarTray}" TargetType="ToolBarTray" />
+    <Style BasedOn="{StaticResource MahApps.Styles.ImageSelectorBaseStyle}" TargetType="mah:ImageSelector" />
 
 </ResourceDictionary>

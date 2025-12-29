@@ -3,64 +3,56 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:ctrls="clr-namespace:MahApps.Metro.Controls"
     xmlns:mah="clr-namespace:MahApps.Metro.Controls">
-    <Style x:Key="MahApps.ToggleSwitch.ImageSelector" TargetType="{x:Type mah:ToggleSwitch}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type mah:ToggleSwitch}">
-                    <Border Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
-                        <Grid>
-                            <ContentPresenter Name="OnContentPresenter" Visibility="Collapsed" />
-                            <Button
-                                Name="switch"
-                                Command="{TemplateBinding Command}"
-                                Content="+" />
-                        </Grid>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsOn" Value="True">
-                            <Setter TargetName="OnContentPresenter" Property="Visibility" Value="Visible" />
-                            <Setter TargetName="switch" Property="Visibility" Value="Collapsed" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="ImageSelectorBaseStyle" TargetType="ctrls:ImageSelector">
+
+    <Style x:Key="MahApps.Styles.ImageSelectorBaseStyle" TargetType="ctrls:ImageSelector">
         <Setter Property="Focusable" Value="False" />
+        <Setter Property="Width" Value="120" />
+        <Setter Property="Height" Value="120" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Stretch" Value="UniformToFill" />
+        <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="StrokeThickness" Value="1" />
         <Setter Property="StrokeDashArray" Value="2,2" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ctrls:ImageSelector">
-                    <Border Background="{TemplateBinding Background}">
-                        <mah:ToggleSwitch
-                            HorizontalContentAlignment="Stretch"
-                            VerticalContentAlignment="Stretch"
-                            Command="ctrls:ImageSelector.Switch"
-                            IsOn="{TemplateBinding HasValue}"
-                            Style="{StaticResource MahApps.ToggleSwitch.ImageSelector}">
-                            <mah:ToggleSwitch.OnContent>
-                                <Image
-                                    MaxWidth="{TemplateBinding MaxWidth}"
-                                    MaxHeight="{TemplateBinding MaxHeight}"
-                                    Source="{Binding Path=Uri}" />
-                            </mah:ToggleSwitch.OnContent>
-                        </mah:ToggleSwitch>
+                    <Border Background="{TemplateBinding PreviewBrush}">
+                        <Grid ClipToBounds="True">
+                            <Button
+                                Name="bn1"
+                                Background="Transparent"
+                                Command="ctrls:ImageSelector.Switch"
+                                Content="+"
+                                FontSize="{TemplateBinding FontSize}"
+                                Style="{DynamicResource MahApps.Styles.Button.Chromeless}" />
+                            <Rectangle
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeDashArray="{TemplateBinding StrokeDashArray}"
+                                StrokeThickness="{TemplateBinding StrokeThickness}" />
+                        </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasValue" Value="True">
+                            <Setter TargetName="bn1" Property="Content" Value="" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="HasValue" Value="True" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="bn1" Property="Content" Value="x" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{DynamicResource SecondaryRegionBrush}" />
-                <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+                <Setter Property="BorderBrush" Value="{DynamicResource MahApps.Brushes.Accent}" />
             </Trigger>
         </Style.Triggers>
     </Style>
-
-
-    <Style BasedOn="{StaticResource ImageSelectorBaseStyle}" TargetType="ctrls:ImageSelector" />
 </ResourceDictionary>
