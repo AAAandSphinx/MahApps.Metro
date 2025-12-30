@@ -3,7 +3,7 @@
     <!-- Project properties -->
     <PropertyGroup>
         <AssemblyName>MahApps.Metro</AssemblyName>
-        <Title>MahApps.Metro</Title>
+        <Title>AAAandSphinx.$(AssemblyName)</Title>
         <RootNamespace>MahApps.Metro</RootNamespace>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <DefineConstants>$(DefineConstants);INTERNAL_NULLABLE_ATTRIBUTES</DefineConstants>
@@ -11,7 +11,7 @@
 
     <!-- NuGet -->
     <PropertyGroup>
-        <Authors>Jan Karger, Bastian Schmidt, Dennis Daume, Brendan Forster, Alex Mitchell, Paul Jenkins, Jake Ginnivan</Authors>
+        <Authors>Jan Karger, Bastian Schmidt, Dennis Daume, Brendan Forster, Alex Mitchell, Paul Jenkins, Jake Ginnivan,AAAandSphinx</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/MahApps/MahApps.Metro</PackageProjectUrl>
         <PackageIcon>mahapps.metro.logo.png</PackageIcon>
@@ -21,6 +21,12 @@
         <RepositoryType>git</RepositoryType>
         <GenerateLibraryLayout>true</GenerateLibraryLayout>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Version>3.0.0.1</Version>
+        <AssemblyVersion>3.0.0.1</AssemblyVersion>
+        <FileVersion>3.0.0.1</FileVersion>
+        <PackageId>AAAandSphinx.$(AssemblyName)</PackageId>
+        <Description>MahApps.Metro, a toolkit for creating Metro / Modern UI styled WPF applications. Based on MahAppsMetro, add the required controls, such as PropertyGrid and ImageSelector, etc.</Description>
     </PropertyGroup>
 
     <ItemGroup>
@@ -54,10 +60,6 @@
     <ItemGroup>
         <None Include="VisualStudioToolsManifest.xml" Pack="true" PackagePath="tools" />
         <UpToDateCheckInput Include="**/*.xaml" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\MahApps.Metro.Extensions\MahApps.Metro.Extensions.csproj" />
     </ItemGroup>
 
     <ItemGroup>

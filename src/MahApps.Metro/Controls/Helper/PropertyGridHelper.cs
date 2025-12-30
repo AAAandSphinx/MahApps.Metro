@@ -8,9 +8,7 @@ using System.Windows;
 namespace MahApps.Metro.Controls
 {
     public class PropertyGridHelper
-    {
-
-
+    { 
         public static double GetTitleWidth(DependencyObject obj)
         {
             return (double)obj.GetValue(TitleWidthProperty);

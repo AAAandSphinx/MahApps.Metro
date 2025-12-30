@@ -59,7 +59,7 @@
                         Text="SIZE" />
                 </StackPanel>
             </metro:MetroTabItem>
-            <metro:MetroTabItem Header="Expander" IsSelected="True">
+            <metro:MetroTabItem Header="Expander">
                 <UniformGrid Columns="2" Rows="2">
                     <Expander
                         Margin="5"
@@ -84,7 +84,22 @@
                         Header="RIGHT"
                         Style="{StaticResource MahApps.Styles.Expander.Clear}" />
                 </UniformGrid>
-
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="ColorPicker">
+                <metro:MetroTabControl>
+                    <metro:MetroTabItem Header="ColorCanvas">
+                        <metro:ColorCanvas />
+                    </metro:MetroTabItem>
+                    <metro:MetroTabItem Header="ColorPalette">
+                        <metro:ColorPalette />
+                    </metro:MetroTabItem>
+                    <metro:MetroTabItem Header="ColorPicker">
+                        <metro:ColorPicker />
+                    </metro:MetroTabItem>
+                    <metro:MetroTabItem Header="ColorEyeDropper">
+                        <metro:ColorEyeDropper />
+                    </metro:MetroTabItem>
+                </metro:MetroTabControl>
             </metro:MetroTabItem>
         </metro:MetroTabControl>
     </Grid>
