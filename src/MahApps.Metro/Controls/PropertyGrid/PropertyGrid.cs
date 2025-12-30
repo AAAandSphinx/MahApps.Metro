@@ -16,13 +16,13 @@ public class PropertyGrid : Control
 {
     private const string ElementItemsControl = "PART_ItemsControl";
 
-    private const string ElementSearchBar = "PART_SearchBar";
+    private const string ElementSearchBar = "PART_Search";
 
     private ItemsControl? _itemsControl;
 
     private ICollectionView? _dataView;
 
-    private SearchBar? _searchBar;
+    private TextBox? _searchBar;
 
     private string? _searchKey;
 
@@ -116,17 +116,17 @@ public class PropertyGrid : Control
     {
         if (_searchBar != null)
         {
-            _searchBar.SearchStarted -= SearchBar_SearchStarted;
+            _searchBar.TextChanged -= Search_SearchStarted;
         }
 
         base.OnApplyTemplate();
 
         _itemsControl = GetTemplateChild(ElementItemsControl) as ItemsControl;
-        _searchBar = GetTemplateChild(ElementSearchBar) as SearchBar;
+        _searchBar = GetTemplateChild(ElementSearchBar) as TextBox;
 
         if (_searchBar != null)
         {
-            _searchBar.SearchStarted += SearchBar_SearchStarted;
+            _searchBar.TextChanged += Search_SearchStarted;
         }
 
         UpdateItems(SelectedObject);
@@ -170,11 +170,10 @@ public class PropertyGrid : Control
         }
     }
 
-    private void SearchBar_SearchStarted(object? sender, FunctionEventArgs<string> e)
+    private void Search_SearchStarted(object? sender, TextChangedEventArgs e)
     {
         if (_dataView == null) return;
-
-        _searchKey = e.Info;
+        _searchKey = (sender as TextBox)?.Text?.Trim();
         if (string.IsNullOrEmpty(_searchKey))
         {
             foreach (UIElement item in _dataView)
@@ -206,7 +205,7 @@ public class PropertyGrid : Control
             PropertyType = propertyDescriptor.PropertyType,
             PropertyTypeName = $"{propertyDescriptor.PropertyType.Namespace}.{propertyDescriptor.PropertyType.Name}"
         };
-    } 
+    }
     protected override void OnRenderSizeChanged(SizeChangedInfo sizeInfo)
     {
         base.OnRenderSizeChanged(sizeInfo);

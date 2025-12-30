@@ -25,7 +25,7 @@ namespace MahApps.Metro.Controls
             [typeof(float)] = EditorTypeCode.SingleNumber,
             [typeof(double)] = EditorTypeCode.DoubleNumber,
             [typeof(bool)] = EditorTypeCode.Switch,
-            [typeof(DateTime)] = EditorTypeCode.DateTime,
+            [typeof(DateTime)] = EditorTypeCode.DateTime, 
             [typeof(HorizontalAlignment)] = EditorTypeCode.HorizontalAlignment,
             [typeof(VerticalAlignment)] = EditorTypeCode.VerticalAlignment,
             [typeof(ImageSource)] = EditorTypeCode.ImageSource

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.ComponentModel;
 using System.Windows.Media;
 #nullable disable
 namespace MahApps.Metro.Extension.Demo.Models
@@ -14,8 +8,11 @@ namespace MahApps.Metro.Extension.Demo.Models
         public string Name { get; set; } = nameof(Name);
         public string Description { get; set; } = nameof(Description);
         public int Age { get; set; } = 99;
+        public float Size { get; set; } = 99f;
         [Category("Useable")]
         public bool IsCheck { get; set; } = false;
+        public bool IsCheck2 { get; set; } = true;
+        public bool IsCheck3 { get; set; } = true;
         public EType EQType { get; set; } = EType.OUT;
         public float Width { get; set; } = 100f;
         [Category("PictureA")]
@@ -36,6 +33,7 @@ namespace MahApps.Metro.Extension.Demo.Models
     public enum EType
     {
         IN,
-        OUT, BOTH
+        OUT,
+        BOTH
     }
 }

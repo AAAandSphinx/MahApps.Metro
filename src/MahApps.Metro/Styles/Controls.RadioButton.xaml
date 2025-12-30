@@ -244,4 +244,35 @@
         </Style.Triggers>
     </Style>
 
+    <Style
+        x:Key="MahApps.Styles.RadioButton.Switch"
+        BasedOn="{StaticResource MahApps.Styles.RadioButton}"
+        TargetType="RadioButton">
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="mah:ControlsHelper.CornerRadius" Value="2.5" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="{Binding Path=(mah:ControlsHelper.CornerRadius), RelativeSource={RelativeSource Mode=TemplatedParent}}">
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
+                            Grid.Column="1"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False"
+                            RecognizesAccessKey="{TemplateBinding mah:ControlsHelper.RecognizesAccessKey}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="{DynamicResource MahApps.Brushes.Accent}" />
+                <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Selected.Foreground}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

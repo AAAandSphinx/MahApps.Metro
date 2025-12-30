@@ -22,7 +22,7 @@ namespace MahApps.Metro.Controls
     [StyleTypedProperty(Property = "HeaderLeftStyle", StyleTargetType = typeof(ToggleButton))]
     [StyleTypedProperty(Property = "HeaderRightStyle", StyleTargetType = typeof(ToggleButton))]
     public static class ExpanderHelper
-    {
+    { 
         public static readonly DependencyProperty ShowToggleButtonProperty
             = DependencyProperty.RegisterAttached("ShowToggleButton",
                                                   typeof(bool),
@@ -369,6 +369,9 @@ namespace MahApps.Metro.Controls
         {
             return (FrameworkElement?)element.GetValue(ExpandSiteControlProperty);
         }
+
+
+       
 
         internal static void SetExpandSiteControl(UIElement element, FrameworkElement? value)
         {

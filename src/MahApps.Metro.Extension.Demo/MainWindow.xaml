@@ -43,6 +43,49 @@
                     <metro:ImageSelector Grid.Row="1" />
                 </Grid>
             </metro:MetroTabItem>
+            <metro:MetroTabItem Header="RadioButton">
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton
+                        Content="RadioButton"
+                        IsChecked="True"
+                        Style="{StaticResource MahApps.Styles.RadioButton.Switch}" />
+                </StackPanel>
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="TextBox">
+                <StackPanel Orientation="Vertical">
+                    <TextBox
+                        Margin="2"
+                        Style="{StaticResource MahApps.Styles.TextBox.Search}"
+                        Text="SIZE" />
+                </StackPanel>
+            </metro:MetroTabItem>
+            <metro:MetroTabItem Header="Expander" IsSelected="True">
+                <UniformGrid Columns="2" Rows="2">
+                    <Expander
+                        Margin="5"
+                        ExpandDirection="Up"
+                        Header="UP"
+                        Style="{StaticResource MahApps.Styles.Expander.Clear}">
+                        <metro:DateTimePicker VerticalAlignment="Top" />
+                    </Expander>
+                    <Expander
+                        Margin="5"
+                        ExpandDirection="Down"
+                        Header="DOWN"
+                        Style="{StaticResource MahApps.Styles.Expander.Clear}" />
+                    <Expander
+                        Margin="5"
+                        ExpandDirection="Left"
+                        Header="LEFT"
+                        Style="{StaticResource MahApps.Styles.Expander.Clear}" />
+                    <Expander
+                        Margin="5"
+                        ExpandDirection="Right"
+                        Header="RIGHT"
+                        Style="{StaticResource MahApps.Styles.Expander.Clear}" />
+                </UniformGrid>
+
+            </metro:MetroTabItem>
         </metro:MetroTabControl>
     </Grid>
 </metro:MetroWindow>

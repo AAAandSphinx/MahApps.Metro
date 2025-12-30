@@ -231,7 +231,7 @@ namespace MahApps.Metro.Controls
                 "CornerRadius",
                 typeof(CornerRadius),
                 typeof(ControlsHelper),
-                new FrameworkPropertyMetadata(new CornerRadius(), FrameworkPropertyMetadataOptions.AffectsMeasure | FrameworkPropertyMetadataOptions.AffectsRender));
+                new FrameworkPropertyMetadata(new CornerRadius(2.5d), FrameworkPropertyMetadataOptions.AffectsMeasure | FrameworkPropertyMetadataOptions.AffectsRender));
 
         /// <summary> 
         /// The CornerRadius property allows users to control the roundness of the button corners independently by 

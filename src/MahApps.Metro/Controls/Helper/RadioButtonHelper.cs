@@ -865,6 +865,8 @@ namespace MahApps.Metro.Controls
             return (Brush?)element.GetValue(CheckGlyphFillDisabledProperty);
         }
 
+  
+
         /// <summary>Helper for setting <see cref="CheckGlyphFillDisabledProperty"/> on <paramref name="element"/>.</summary>
         /// <param name="element"><see cref="UIElement"/> to set <see cref="CheckGlyphFillDisabledProperty"/> on.</param>
         /// <param name="value">CheckGlyphFillDisabled property value.</param>
