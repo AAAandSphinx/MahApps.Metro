@@ -18,58 +18,60 @@
 using System.Reflection;
 using System.Security;
 using System.Security.Permissions;
+using System.Windows;
 using System.Windows.Input;
 
 namespace MahApps.Metro.Controls
 {
-  public class ZoomboxCursors
-  {
-    #region Constructors
-
-    static ZoomboxCursors()
+    public class ZoomboxCursors
     {
-      try
-      {
+        #region Constructors
+
+        static ZoomboxCursors()
+        {
+            try
+            {
 #if !NETCORE && !NET5
-      //  new EnvironmentPermission( PermissionState.Unrestricted ).Demand();
+                //  new EnvironmentPermission( PermissionState.Unrestricted ).Demand();
 #endif
-        //_zoom = new Cursor( ResourceHelper.LoadResourceStream( Assembly.GetExecutingAssembly(), "Zoombox/Resources/Zoom.cur" ) );
-        //_zoomRelative = new Cursor( ResourceHelper.LoadResourceStream( Assembly.GetExecutingAssembly(), "Zoombox/Resources/ZoomRelative.cur" ) );
-      }
-      catch( SecurityException )
-      {
-        // partial trust, so just use default cursors
-      }
+                var streamInfo = Application.GetResourceStream(new System.Uri("pack://application:,,,/MahApps.Metro;component/Controls/Zoombox/Resources/zoomin.cur", System.UriKind.RelativeOrAbsolute));
+                _zoom = new Cursor(streamInfo.Stream);
+                //_zoomRelative = new Cursor( ResourceHelper.LoadResourceStream( Assembly.GetExecutingAssembly(), "Zoombox/Resources/ZoomRelative.cur" ) );
+            }
+            catch (SecurityException)
+            {
+                // partial trust, so just use default cursors
+            }
+        }
+
+        #endregion
+
+        #region Zoom Static Property
+
+        public static Cursor Zoom
+        {
+            get
+            {
+                return _zoom;
+            }
+        }
+
+        private static readonly Cursor _zoom = Cursors.Arrow;
+
+        #endregion
+
+        #region ZoomRelative Static Property
+
+        public static Cursor ZoomRelative
+        {
+            get
+            {
+                return _zoomRelative;
+            }
+        }
+
+        private static readonly Cursor _zoomRelative = Cursors.Arrow;
+
+        #endregion
     }
-
-    #endregion
-
-    #region Zoom Static Property
-
-    public static Cursor Zoom
-    {
-      get
-      {
-        return _zoom;
-      }
-    }
-
-    private static readonly Cursor _zoom = Cursors.Arrow;
-
-    #endregion
-
-    #region ZoomRelative Static Property
-
-    public static Cursor ZoomRelative
-    {
-      get
-      {
-        return _zoomRelative;
-      }
-    }
-
-    private static readonly Cursor _zoomRelative = Cursors.Arrow;
-
-    #endregion
-  }
 }
