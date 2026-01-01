@@ -17,7 +17,7 @@ public class ZoomboxViewChangedEventArgs : PropertyChangedEventArgs<ZoomboxView>
 	public bool IsOldViewFromStack => _oldViewStackIndex >= 0;
 
 	public ZoomboxViewChangedEventArgs(ZoomboxView oldView, ZoomboxView newView, int oldViewStackIndex, int newViewStackIndex)
-		: base(ZoomBox.CurrentViewChanged, oldView, newView)
+		: base(Zoombox.CurrentViewChangedEvent, oldView, newView)
 	{
 		_newViewStackIndex = newViewStackIndex;
 		_oldViewStackIndex = oldViewStackIndex;

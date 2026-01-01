@@ -1,48 +1,75 @@
- //< !--***********************************************************************************
+﻿/*************************************************************************************
+   
+   Toolkit for WPF
 
- //  Toolkit for WPF
+   Copyright (C) 2007-2025 Xceed Software Inc.
 
- //  Copyright(C) 2007 - 2025 Xceed Software Inc.
+   This program is provided to you under the terms of the XCEED SOFTWARE, INC.
+   COMMUNITY LICENSE AGREEMENT (for non-commercial use) as published at 
+   https://github.com/xceedsoftware/wpftoolkit/blob/master/license.md 
 
- //  This program is provided to you under the terms of the XCEED SOFTWARE, INC.
- //  COMMUNITY LICENSE AGREEMENT(for non - commercial use) as published at
- //  https://github.com/xceedsoftware/wpftoolkit/blob/master/license.md 
+   For more features, controls, and fast professional support,
+   pick up the Plus Edition at https://xceed.com/xceed-toolkit-plus-for-wpf/
 
- //  For more features, controls, and fast professional support,
- //  pick up the Plus Edition at https://xceed.com/xceed-toolkit-plus-for-wpf/
+   Stay informed: follow @datagrid on Twitter or Like http://facebook.com/datagrids
 
- //  Stay informed: follow @datagrid on Twitter or Like http://facebook.com/datagrids
+  ***********************************************************************************/
 
- // **********************************************************************************-->
 using System.Reflection;
 using System.Security;
 using System.Security.Permissions;
 using System.Windows.Input;
 
-namespace MahApps.Metro.Controls;
-
-public class ZoomBoxCursors
+namespace MahApps.Metro.Controls
 {
-	private static readonly Cursor _zoom;
+  public class ZoomboxCursors
+  {
+    #region Constructors
 
-	private static readonly Cursor _zoomRelative;
+    static ZoomboxCursors()
+    {
+      try
+      {
+#if !NETCORE && !NET5
+      //  new EnvironmentPermission( PermissionState.Unrestricted ).Demand();
+#endif
+        //_zoom = new Cursor( ResourceHelper.LoadResourceStream( Assembly.GetExecutingAssembly(), "Zoombox/Resources/Zoom.cur" ) );
+        //_zoomRelative = new Cursor( ResourceHelper.LoadResourceStream( Assembly.GetExecutingAssembly(), "Zoombox/Resources/ZoomRelative.cur" ) );
+      }
+      catch( SecurityException )
+      {
+        // partial trust, so just use default cursors
+      }
+    }
 
-	public static Cursor Zoom => _zoom;
+    #endregion
 
-	public static Cursor ZoomRelative => _zoomRelative;
+    #region Zoom Static Property
 
-	static ZoomBoxCursors()
-	{
-		_zoom = Cursors.Arrow;
-		_zoomRelative = Cursors.Arrow;
-		try
-		{
-			//new EnvironmentPermission(PermissionState.Unrestricted).Demand();
-			//_zoom = new Cursor(ResourceHelper.LoadResourceStream(Assembly.GetExecutingAssembly(), "Zoombox/Resources/Zoom.cur"));
-			//_zoomRelative = new Cursor(ResourceHelper.LoadResourceStream(Assembly.GetExecutingAssembly(), "Zoombox/Resources/ZoomRelative.cur"));
-		}
-		catch (SecurityException)
-		{
-		}
-	}
+    public static Cursor Zoom
+    {
+      get
+      {
+        return _zoom;
+      }
+    }
+
+    private static readonly Cursor _zoom = Cursors.Arrow;
+
+    #endregion
+
+    #region ZoomRelative Static Property
+
+    public static Cursor ZoomRelative
+    {
+      get
+      {
+        return _zoomRelative;
+      }
+    }
+
+    private static readonly Cursor _zoomRelative = Cursors.Arrow;
+
+    #endregion
+  }
 }

@@ -1,12 +1,29 @@
+﻿/*************************************************************************************
+   
+   Toolkit for WPF
 
-namespace MahApps.Metro.Controls;
+   Copyright (C) 2007-2025 Xceed Software Inc.
 
-public enum ZoomboxViewKind
+   This program is provided to you under the terms of the XCEED SOFTWARE, INC.
+   COMMUNITY LICENSE AGREEMENT (for non-commercial use) as published at 
+   https://github.com/xceedsoftware/wpftoolkit/blob/master/license.md 
+
+   For more features, controls, and fast professional support,
+   pick up the Plus Edition at https://xceed.com/xceed-toolkit-plus-for-wpf/
+
+   Stay informed: follow @datagrid on Twitter or Like http://facebook.com/datagrids
+
+  ***********************************************************************************/
+
+namespace MahApps.Metro.Controls
 {
-	Absolute = -5,
-	Fit,
-	Fill,
-	Center,
-	Empty,
-	Region
+  public enum ZoomboxViewKind
+  {
+    Absolute = -5,
+    Fit = -4,
+    Fill = -3,
+    Center = -2,
+    Empty = -1,
+    Region,
+  }
 }

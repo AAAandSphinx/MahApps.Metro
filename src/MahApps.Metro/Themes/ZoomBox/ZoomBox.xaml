@@ -40,6 +40,7 @@
         x:Key="VisibleIfNotTrueConverter"
         Inverted="True"
         Not="True" />
+
     <SolidColorBrush x:Key="GlyphBrush" Color="white" />
 
     <Style
@@ -84,7 +85,7 @@
         TargetType="{x:Type ToggleButton}">
         <Setter Property="Visibility" Value="Visible" />
         <Style.Triggers>
-            <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ZoomBox}}, Path=ViewFinderVisibility}" Value="Hidden">
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:Zoombox}}, Path=ViewFinder.Visibility}" Value="{x:Static Visibility.Hidden}">
                 <Setter Property="Visibility" Value="Collapsed" />
             </DataTrigger>
         </Style.Triggers>
@@ -275,7 +276,7 @@
         </DrawingImage.Drawing>
     </DrawingImage>
 
-    <Style x:Key="{x:Type local:ZoomBox}" TargetType="{x:Type local:ZoomBox}">
+    <Style x:Key="{x:Type local:Zoombox}" TargetType="{x:Type local:Zoombox}">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="PanDistance" Value="5.0" />
@@ -295,7 +296,7 @@
         <Setter Property="IsTabStop" Value="False" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:ZoomBox}">
+                <ControlTemplate TargetType="{x:Type local:Zoombox}">
                     <ControlTemplate.Resources>
                         <SolidColorBrush x:Key="SelectionBrush" Color="Transparent" />
                         <Pen
@@ -375,7 +376,7 @@
                             Grid.Row="1"
                             Grid.Column="1"
                             Background="{DynamicResource MahApps.Brushes.ThemeBackground}" />
-
+                        <!--  缩略视图  -->
                         <Border
                             Name="ViewFinder"
                             Width="200"
@@ -641,10 +642,10 @@
                 <Setter Property="Cursor" Value="Cross" />
             </Trigger>
             <Trigger Property="AreZoomModifiersActive" Value="True">
-                <Setter Property="Cursor" Value="{x:Static local:ZoomBoxCursors.Zoom}" />
+                <Setter Property="Cursor" Value="{x:Static local:ZoomboxCursors.Zoom}" />
             </Trigger>
             <Trigger Property="AreRelativeZoomModifiersActive" Value="True">
-                <Setter Property="Cursor" Value="{x:Static local:ZoomBoxCursors.ZoomRelative}" />
+                <Setter Property="Cursor" Value="{x:Static local:ZoomboxCursors.ZoomRelative}" />
             </Trigger>
             <!--
                 The IsDraggingContent and IsSelectingRegion triggers should

@@ -11,7 +11,7 @@
 
     <!-- NuGet -->
     <PropertyGroup>
-        <Authors>Jan Karger, Bastian Schmidt, Dennis Daume, Brendan Forster, Alex Mitchell, Paul Jenkins, Jake Ginnivan,AAAandSphinx</Authors>
+        <Authors>Jan Karger, Bastian Schmidt, Dennis Daume, Brendan Forster, Alex Mitchell, Paul Jenkins, Jake Ginnivan, AAAandSphinx</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/MahApps/MahApps.Metro</PackageProjectUrl>
         <PackageIcon>mahapps.metro.logo.png</PackageIcon>

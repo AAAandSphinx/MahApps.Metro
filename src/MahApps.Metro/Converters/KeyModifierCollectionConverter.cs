@@ -7,8 +7,7 @@ using System.Linq;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
-using MahApps.Metro.Controls;
-using static MahApps.Metro.Controls.ZoomBox;
+using MahApps.Metro.Controls; 
 #nullable disable
 namespace MahApps.Metro.Converters
 {
