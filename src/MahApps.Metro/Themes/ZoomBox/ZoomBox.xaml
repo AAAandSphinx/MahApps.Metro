@@ -48,8 +48,8 @@
         BasedOn="{x:Null}"
         TargetType="{x:Type ButtonBase}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-        <Setter Property="Background" Value="#333333" />
-        <Setter Property="Foreground" Value="#cccccc" />
+        <Setter Property="Background" Value="{DynamicResource MahApps.Brushes.ThemeBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.ThemeForeground}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ButtonBase}">
@@ -128,11 +128,11 @@
                                 Thickness="1.2" />
                         </GeometryDrawing.Pen>
                     </GeometryDrawing>
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 249.378,215.741L 249.378,215.743L 249.383,215.743L                249.383,219.159L 249.378,219.159L 249.378,224.598L 245.962,224.598L                245.962,219.159L 240.525,219.159L 240.525,215.743L 245.962,215.743L                245.962,215.741L 249.378,215.741 Z" />
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 249.383,240.726L 249.381,240.726L 249.381,240.73L                245.965,240.73L 245.965,240.726L 240.526,240.726L 240.526,237.31L                245.965,237.31L 245.965,231.873L 249.381,231.873L 249.381,237.31L                249.383,237.31L 249.383,240.726 Z" />
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 247.539,220.321L 239.801,228.059L 247.539,235.796L                244.962,238.373L 237.224,230.635L 229.487,238.373L 226.91,235.796L                234.648,228.059L 226.91,220.321L 229.487,217.744L 237.224,225.482L                244.962,217.744L 247.539,220.321 Z" />
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 224.879,240.73L 224.879,240.729L 224.874,240.729L                224.874,237.312L 224.879,237.312L 224.879,231.873L 228.295,231.873L                228.295,237.312L 233.732,237.312L 233.732,240.729L 228.295,240.729L                228.295,240.73L 224.879,240.73 Z" />
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 224.874,215.746L 224.876,215.746L 224.876,215.741L                228.292,215.741L 228.292,215.746L 233.731,215.746L 233.731,219.162L                228.292,219.162L 228.292,224.598L 224.876,224.598L 224.876,219.162L                224.874,219.162L 224.874,215.746 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 249.378,215.741L 249.378,215.743L 249.383,215.743L                249.383,219.159L 249.378,219.159L 249.378,224.598L 245.962,224.598L                245.962,219.159L 240.525,219.159L 240.525,215.743L 245.962,215.743L                245.962,215.741L 249.378,215.741 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 249.383,240.726L 249.381,240.726L 249.381,240.73L                245.965,240.73L 245.965,240.726L 240.526,240.726L 240.526,237.31L                245.965,237.31L 245.965,231.873L 249.381,231.873L 249.381,237.31L                249.383,237.31L 249.383,240.726 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 247.539,220.321L 239.801,228.059L 247.539,235.796L                244.962,238.373L 237.224,230.635L 229.487,238.373L 226.91,235.796L                234.648,228.059L 226.91,220.321L 229.487,217.744L 237.224,225.482L                244.962,217.744L 247.539,220.321 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 224.879,240.73L 224.879,240.729L 224.874,240.729L                224.874,237.312L 224.879,237.312L 224.879,231.873L 228.295,231.873L                228.295,237.312L 233.732,237.312L 233.732,240.729L 228.295,240.729L                228.295,240.73L 224.879,240.73 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 224.874,215.746L 224.876,215.746L 224.876,215.741L                228.292,215.741L 228.292,215.746L 233.731,215.746L 233.731,219.162L                228.292,219.162L 228.292,224.598L 224.876,224.598L 224.876,219.162L                224.874,219.162L 224.874,215.746 Z" />
                 </DrawingGroup.Children>
             </DrawingGroup>
         </DrawingImage.Drawing>
@@ -145,15 +145,15 @@
                     <GeometryDrawing Geometry="F1 M 267.334,210.477L 304.795,210.477L                304.795,246.96L 267.334,246.96L 267.334,210.477 Z">
                         <GeometryDrawing.Pen>
                             <Pen
-                                Brush="{StaticResource GlyphBrush}"
+                                Brush="{DynamicResource MahApps.Brushes.Accent}"
                                 LineJoin="Round"
                                 Thickness="1.2" />
                         </GeometryDrawing.Pen>
                     </GeometryDrawing>
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 298.574,216.073L 298.574,216.075L 298.579,216.075L                298.579,219.491L 298.574,219.491L 298.574,224.93L 295.158,224.93L                295.158,219.491L 289.721,219.491L 289.721,216.075L 295.158,216.075L                295.158,216.073L 298.574,216.073 Z" />
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 298.579,241.058L 298.577,241.058L 298.577,241.062L                295.161,241.062L 295.161,241.058L 289.722,241.058L 289.722,237.642L                295.161,237.642L 295.161,232.205L 298.577,232.205L 298.577,237.642L                298.579,237.642L 298.579,241.058 Z" />
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 274.075,241.062L 274.075,241.061L 274.07,241.061L                274.07,237.644L 274.075,237.644L 274.075,232.205L 277.491,232.205L                277.491,237.644L 282.928,237.644L 282.928,241.061L 277.491,241.061L                277.491,241.062L 274.075,241.062 Z" />
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 274.07,216.078L 274.072,216.078L 274.072,216.073L                277.488,216.073L 277.488,216.078L 282.927,216.078L 282.927,219.494L                277.488,219.494L 277.488,224.93L 274.072,224.93L 274.072,219.494L                274.07,219.494L 274.07,216.078 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 298.574,216.073L 298.574,216.075L 298.579,216.075L                298.579,219.491L 298.574,219.491L 298.574,224.93L 295.158,224.93L                295.158,219.491L 289.721,219.491L 289.721,216.075L 295.158,216.075L                295.158,216.073L 298.574,216.073 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 298.579,241.058L 298.577,241.058L 298.577,241.062L                295.161,241.062L 295.161,241.058L 289.722,241.058L 289.722,237.642L                295.161,237.642L 295.161,232.205L 298.577,232.205L 298.577,237.642L                298.579,237.642L 298.579,241.058 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 274.075,241.062L 274.075,241.061L 274.07,241.061L                274.07,237.644L 274.075,237.644L 274.075,232.205L 277.491,232.205L                277.491,237.644L 282.928,237.644L 282.928,241.061L 277.491,241.061L                277.491,241.062L 274.075,241.062 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 274.07,216.078L 274.072,216.078L 274.072,216.073L                277.488,216.073L 277.488,216.078L 282.927,216.078L 282.927,219.494L                277.488,219.494L 277.488,224.93L 274.072,224.93L 274.072,219.494L                274.07,219.494L 274.07,216.078 Z" />
                 </DrawingGroup.Children>
             </DrawingGroup>
         </DrawingImage.Drawing>
@@ -166,12 +166,12 @@
                     <GeometryDrawing Geometry="F1 M 315.334,209.944L 352.795,209.944L                352.795,246.427L 315.334,246.427L 315.334,209.944 Z">
                         <GeometryDrawing.Pen>
                             <Pen
-                                Brush="{StaticResource GlyphBrush}"
+                                Brush="{DynamicResource MahApps.Brushes.Accent}"
                                 LineJoin="Round"
                                 Thickness="1.2" />
                         </GeometryDrawing.Pen>
                     </GeometryDrawing>
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 328.878,223.652L 338.19,223.652C 338.27,223.652                338.334,223.716 338.334,223.796L 338.334,233.108C 338.334,233.188                338.27,233.252 338.19,233.252L 328.878,233.252C 328.799,233.252                328.734,233.188 328.734,233.108L 328.734,223.796C 328.734,223.716                328.799,223.652 328.878,223.652 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 328.878,223.652L 338.19,223.652C 338.27,223.652                338.334,223.716 338.334,223.796L 338.334,233.108C 338.334,233.188                338.27,233.252 338.19,233.252L 328.878,233.252C 328.799,233.252                328.734,233.188 328.734,233.108L 328.734,223.796C 328.734,223.716                328.799,223.652 328.878,223.652 Z" />
                 </DrawingGroup.Children>
             </DrawingGroup>
         </DrawingImage.Drawing>
@@ -184,7 +184,7 @@
                     <DrawingGroup.Transform>
                         <MatrixTransform Matrix="1,0,0,1,0.667,1.667" />
                     </DrawingGroup.Transform>
-                    <GeometryDrawing Brush="#FFFFFFFF" Geometry="M6.624,0 C10.281,0                13.247,2.836 13.247,6.334 13.247,7.176 13.075,7.980 12.734,8.703               L14.666,10.550 14.666,10.631 8.989,10.631 8.989,5.202 9.072,5.202               10.971,7.018 C11.095,6.810 11.116,6.573 11.116,6.331 11.116,3.959               9.104,2.034 6.622,2.034 4.139,2.034 2.127,3.959 2.127,6.331               2.127,8.575 3.925,10.417 6.224,10.552 L8.220,12.461 C7.712,12.602               7.176,12.667 6.624,12.667 2.966,12.667 0,9.831 0,6.334 0,2.836               2.966,0 6.624,0 z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="M6.624,0 C10.281,0                13.247,2.836 13.247,6.334 13.247,7.176 13.075,7.980 12.734,8.703               L14.666,10.550 14.666,10.631 8.989,10.631 8.989,5.202 9.072,5.202               10.971,7.018 C11.095,6.810 11.116,6.573 11.116,6.331 11.116,3.959               9.104,2.034 6.622,2.034 4.139,2.034 2.127,3.959 2.127,6.331               2.127,8.575 3.925,10.417 6.224,10.552 L8.220,12.461 C7.712,12.602               7.176,12.667 6.624,12.667 2.966,12.667 0,9.831 0,6.334 0,2.836               2.966,0 6.624,0 z" />
                 </DrawingGroup>
                 <GeometryDrawing Brush="#00FFFFFF">
                     <GeometryDrawing.Geometry>
@@ -210,7 +210,7 @@
                                 Thickness="1.2" />
                         </GeometryDrawing.Pen>
                     </GeometryDrawing>
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 442.009,240.438C 442.009,240.534 441.886,240.612                441.735,240.612L 423.992,240.612C 423.841,240.612 423.718,240.534                423.718,240.438L 423.718,229.595L 418.991,229.595C 418.874,229.479                418.874,229.289 418.991,229.173L 432.652,215.511C 432.769,215.395                432.958,215.395 433.075,215.511L 446.736,229.173C 446.853,229.289                446.853,229.479 446.736,229.595L 442.009,229.595L 442.009,240.438 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 442.009,240.438C 442.009,240.534 441.886,240.612                441.735,240.612L 423.992,240.612C 423.841,240.612 423.718,240.534                423.718,240.438L 423.718,229.595L 418.991,229.595C 418.874,229.479                418.874,229.289 418.991,229.173L 432.652,215.511C 432.769,215.395                432.958,215.395 433.075,215.511L 446.736,229.173C 446.853,229.289                446.853,229.479 446.736,229.595L 442.009,229.595L 442.009,240.438 Z" />
                 </DrawingGroup.Children>
             </DrawingGroup>
         </DrawingImage.Drawing>
@@ -228,10 +228,10 @@
                                 Thickness="1" />
                         </GeometryDrawing.Pen>
                     </GeometryDrawing>
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M                57.2513,286.303L 57.2513,318.344L 26.3707,302.323L 57.2513,286.303 Z">
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M                57.2513,286.303L 57.2513,318.344L 26.3707,302.323L 57.2513,286.303 Z">
                         <GeometryDrawing.Pen>
                             <Pen
-                                Brush="{StaticResource GlyphBrush}"
+                                Brush="{DynamicResource MahApps.Brushes.Accent}"
                                 LineJoin="Round"
                                 Thickness="1" />
                         </GeometryDrawing.Pen>
@@ -253,10 +253,10 @@
                                 Thickness="1" />
                         </GeometryDrawing.Pen>
                     </GeometryDrawing>
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 26.3708,398.573L 26.3708,366.532L 57.2514,382.553L                26.3708,398.573 Z">
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 26.3708,398.573L 26.3708,366.532L 57.2514,382.553L                26.3708,398.573 Z">
                         <GeometryDrawing.Pen>
                             <Pen
-                                Brush="{StaticResource GlyphBrush}"
+                                Brush="{DynamicResource MahApps.Brushes.Accent}"
                                 LineJoin="Round"
                                 Thickness="1" />
                         </GeometryDrawing.Pen>
@@ -270,7 +270,7 @@
         <DrawingImage.Drawing>
             <DrawingGroup>
                 <DrawingGroup.Children>
-                    <GeometryDrawing Brush="{StaticResource GlyphBrush}" Geometry="F1 M 470.57,422.952C 470.414,423.109 470.161,423.109                470.005,422.952L 451.714,404.662C 451.558,404.506 451.558,404.252                451.714,404.096L 489.144,366.667L 451.714,329.237C 451.558,329.081                451.558,328.828 451.714,328.671L 470.005,310.381C 470.161,310.225                470.414,310.225 470.57,310.381L 508,347.81L 545.43,310.381C                545.586,310.225 545.839,310.225 545.995,310.381L 564.286,328.671C                564.442,328.828 564.442,329.081 564.286,329.237L 526.856,366.667L                564.286,404.096C 564.442,404.252 564.442,404.506 564.286,404.662L                545.995,422.952C 545.839,423.109 545.586,423.109 545.43,422.952L                508,385.523L 470.57,422.952 Z" />
+                    <GeometryDrawing Brush="{DynamicResource MahApps.Brushes.Accent}" Geometry="F1 M 470.57,422.952C 470.414,423.109 470.161,423.109                470.005,422.952L 451.714,404.662C 451.558,404.506 451.558,404.252                451.714,404.096L 489.144,366.667L 451.714,329.237C 451.558,329.081                451.558,328.828 451.714,328.671L 470.005,310.381C 470.161,310.225                470.414,310.225 470.57,310.381L 508,347.81L 545.43,310.381C                545.586,310.225 545.839,310.225 545.995,310.381L 564.286,328.671C                564.442,328.828 564.442,329.081 564.286,329.237L 526.856,366.667L                564.286,404.096C 564.442,404.252 564.442,404.506 564.286,404.662L                545.995,422.952C 545.839,423.109 545.586,423.109 545.43,422.952L                508,385.523L 470.57,422.952 Z" />
                 </DrawingGroup.Children>
             </DrawingGroup>
         </DrawingImage.Drawing>
@@ -299,13 +299,18 @@
                 <ControlTemplate TargetType="{x:Type local:Zoombox}">
                     <ControlTemplate.Resources>
                         <SolidColorBrush x:Key="SelectionBrush" Color="Transparent" />
+                        <!--  在画布上绘制拖动的边框  -->
                         <Pen
                             x:Key="SelectionPen"
-                            Brush="#7F3F3F3F"
-                            Thickness="2.0" />
+                            Brush="{DynamicResource MahApps.Brushes.Accent}"
+                            Thickness="2.0">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes="1,5" />
+                            </Pen.DashStyle>
+                        </Pen>
                         <Pen
                             x:Key="ViewportPen"
-                            Brush="Red"
+                            Brush="{DynamicResource MahApps.Brushes.Accent}"
                             Thickness="1.0" />
                         <InputBindingCollection x:Key="InputBindings">
                             <KeyBinding
@@ -335,6 +340,10 @@
                             <KeyBinding
                                 Key="Right"
                                 Command="local:Zoombox.PanRight"
+                                Modifiers="Shift+Control" />
+                            <KeyBinding
+                                Key="R"
+                                Command="local:Zoombox.ZoomReset"
                                 Modifiers="Shift+Control" />
                             <KeyBinding
                                 Key="Down"
@@ -384,10 +393,10 @@
                             Margin="10"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Bottom"
-                            Background="#b0666666"
-                            BorderBrush="{TemplateBinding Foreground}"
+                            Background="{DynamicResource MahApps.Brushes.ThemeBackground}"
+                            BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
                             BorderThickness="2"
-                            CornerRadius="0"
+                            CornerRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:Zoombox}, Path=(local:ControlsHelper.CornerRadius)}"
                             Opacity="0"
                             RenderTransformOrigin="1,1">
                             <Border.RenderTransform>
@@ -487,7 +496,7 @@
                                 <Border
                                     Grid.Row="1"
                                     Background="#80FFFFFF"
-                                    BorderBrush="{StaticResource GlyphBrush}"
+                                    BorderBrush="{DynamicResource MahApps.Brushes.Accent4}"
                                     BorderThickness="2" />
                                 <local:ZoomboxViewFinderDisplay
                                     x:Name="ViewFinderDisplay"
@@ -512,8 +521,22 @@
                             Foreground="Transparent"
                             IsChecked="{Binding Path=ViewFinderVisibility, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource TrueIfVisibleConverter}}"
                             IsTabStop="False"
-                            Style="{StaticResource ViewFinderToggleButtonStyle}"
-                            ToolTip="Show View Finder">
+                            Style="{StaticResource ViewFinderToggleButtonStyle}">
+                            <ToggleButton.ToolTip>
+                                <TextBlock>
+                                    <Bold>Show View Finder</Bold>
+                                    <LineBreak />
+                                    <Underline>Alt</Underline><Run>: Zoom to selected view</Run>
+                                    <LineBreak />
+                                    <Underline>Ctrl</Underline><Run>: Drag to View</Run>
+                                    <LineBreak />
+                                    <Underline>Shift</Underline><Run>: Zoom to View</Run>
+                                    <LineBreak />
+                                    <Underline>Ctrl+Shift+R</Underline><Run>: Reset View</Run>
+                                    <LineBreak />
+                                    <Underline>Ctrl+Shift+Left/Up/Down/Right</Underline><Run>: Change View</Run>
+                                </TextBlock>
+                            </ToggleButton.ToolTip>
                             <Grid Name="ShowViewFinderGlyph" Opacity="0">
                                 <Image x:Name="ShowViewFinderGlyphImage" Source="{StaticResource ShowViewFinderGlyphResource}" />
                             </Grid>
