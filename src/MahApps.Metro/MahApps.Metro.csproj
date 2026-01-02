@@ -22,11 +22,29 @@
         <GenerateLibraryLayout>true</GenerateLibraryLayout>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <Version>3.0.0.1</Version>
+        <Version>3.0.0.2</Version>
         <AssemblyVersion>3.0.0.1</AssemblyVersion>
         <FileVersion>3.0.0.1</FileVersion>
         <PackageId>AAAandSphinx.$(AssemblyName)</PackageId>
         <Description>MahApps.Metro, a toolkit for creating Metro / Modern UI styled WPF applications. Based on MahAppsMetro, add the required controls, such as PropertyGrid and ImageSelector, etc.</Description>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows|AnyCPU'">
+      <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows|AnyCPU'">
+      <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net462|AnyCPU'">
+      <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows|AnyCPU'">
+      <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows|AnyCPU'">
+      <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net462|AnyCPU'">
+      <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
