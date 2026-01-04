@@ -27,6 +27,8 @@
         <FileVersion>3.0.0.1</FileVersion>
         <PackageId>AAAandSphinx.$(AssemblyName)</PackageId>
         <Description>MahApps.Metro, a toolkit for creating Metro / Modern UI styled WPF applications. Based on MahAppsMetro, add the required controls, such as PropertyGrid and ImageSelector, etc.</Description>
+        <SignAssembly>True</SignAssembly>
+        <AssemblyOriginatorKeyFile>D:\Code\AAAandSphinx\MahApps.Metro\src\mahapps.public.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows|AnyCPU'">
       <TreatWarningsAsErrors>False</TreatWarningsAsErrors>

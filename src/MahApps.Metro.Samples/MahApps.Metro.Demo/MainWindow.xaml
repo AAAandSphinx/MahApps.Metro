@@ -448,7 +448,9 @@
             <TabItem Header="MultiSelectionComboBox">
                 <exampleViews:MultiSelectionComboBoxExample />
             </TabItem>
-
+            <TabItem Header="ZoomBox">
+                <exampleViews:ZoomBoxExample />
+            </TabItem>
             <TabItem Header="others">
                 <ScrollViewer
                     Margin="2"

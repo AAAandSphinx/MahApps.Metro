@@ -218,7 +218,7 @@
                                     ctrls:TextBoxHelper.AutoWatermark="True"
                                     ctrls:TextBoxHelper.ClearTextButton="True"
                                     ctrls:TextBoxHelper.Watermark="Filter..."
-                                    Style="{DynamicResource MahApps.Styles.TextBox.Search}" />
+                                    Style="{DynamicResource MahApps.Styles.TextBox}" />
                             </DockPanel>
                             <ctrls:PropertyItemsControl
                                 x:Name="PART_ItemsControl"
